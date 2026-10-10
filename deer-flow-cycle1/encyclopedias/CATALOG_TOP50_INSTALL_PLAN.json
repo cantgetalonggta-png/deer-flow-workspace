@@ -1,0 +1,364 @@
+{
+  "updatedAt": "2026-10-10T13:47:35.314190Z",
+  "strategy": "Do NOT bulk install 4344 skills. Install by demand; seed top 50 by completeness/scripts.",
+  "top50": [
+    {
+      "id": "9000-word-minimum",
+      "name": "9000-word-minimum",
+      "category": "documents",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "agent-orchestration",
+      "name": "agent-orchestration",
+      "category": "agents",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "apple-notes",
+      "name": "apple-notes",
+      "category": "documents",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "archivist",
+      "name": "archivist",
+      "category": "general",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "batch-api-wrapper",
+      "name": "batch-api-wrapper",
+      "category": "data-api",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "blacksmith-testbox",
+      "name": "blacksmith-testbox",
+      "category": "devops",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "bluebubbles",
+      "name": "bluebubbles",
+      "category": "media-comms",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "clawhub",
+      "name": "clawhub",
+      "category": "agents",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "coherent-communication",
+      "name": "coherent-communication",
+      "category": "agents",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "color",
+      "name": "color",
+      "category": "agents",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "common-sense-logic-critical-thinking",
+      "name": "common-sense-logic-critical-thinking",
+      "category": "documents",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "continue-next-or-continue",
+      "name": "continue-next-or-continue",
+      "category": "documents",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "document-ingestion",
+      "name": "document-ingestion",
+      "category": "documents",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "document-intelligence",
+      "name": "document-intelligence",
+      "category": "documents",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "docx",
+      "name": "docx",
+      "category": "devops",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "each-structured-prompt-research",
+      "name": "each-structured-prompt-research",
+      "category": "documents",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "epstein-pdf-batch-ingest",
+      "name": "epstein-pdf-batch-ingest",
+      "category": "documents",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "ethical-data-harvesting",
+      "name": "ethical-data-harvesting",
+      "category": "devops",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "ethical-scraper-orchestration",
+      "name": "ethical-scraper-orchestration",
+      "category": "devops",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "external-api-wrapper",
+      "name": "external-api-wrapper",
+      "category": "data-api",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "game-dev",
+      "name": "game-dev",
+      "category": "devops",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "github",
+      "name": "github",
+      "category": "devops",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "gog",
+      "name": "gog",
+      "category": "general",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "grok-4-20-multi-agent",
+      "name": "grok-4-20-multi-agent",
+      "category": "agents",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "grok-build-plugins",
+      "name": "grok-build-plugins",
+      "category": "devops",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "issue-triage",
+      "name": "issue-triage",
+      "category": "devops",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "mcporter",
+      "name": "mcporter",
+      "category": "data-api",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "mega-skill",
+      "name": "mega-skill",
+      "category": "devops",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "mongo-tom-roleplay",
+      "name": "mongo-tom-roleplay",
+      "category": "documents",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "nano-pdf",
+      "name": "nano-pdf",
+      "category": "documents",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "next-investigation-trigger",
+      "name": "next-investigation-trigger",
+      "category": "documents",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "obsidian-vault-maintainer",
+      "name": "obsidian-vault-maintainer",
+      "category": "devops",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "omnivoice-api",
+      "name": "omnivoice-api",
+      "category": "media-comms",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "openai-whisper-api",
+      "name": "openai-whisper-api",
+      "category": "media-comms",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "oss-compliance-gate",
+      "name": "oss-compliance-gate",
+      "category": "devops",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "pdf",
+      "name": "pdf",
+      "category": "devops",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "pdf-page-section-breakdown",
+      "name": "pdf-page-section-breakdown",
+      "category": "documents",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "play-billing-activation-detector",
+      "name": "play-billing-activation-detector",
+      "category": "devops",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "postgresql-sql",
+      "name": "postgresql-sql",
+      "category": "devops",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "pptx",
+      "name": "pptx",
+      "category": "agents",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "prose",
+      "name": "prose",
+      "category": "agents",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "qqbot-channel",
+      "name": "qqbot-channel",
+      "category": "media-comms",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "rtk-triage",
+      "name": "rtk-triage",
+      "category": "devops",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "run-everything-activation",
+      "name": "run-everything-activation",
+      "category": "documents",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "self-dev-resources",
+      "name": "self-dev-resources",
+      "category": "devops",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "skill-creator",
+      "name": "skill-creator",
+      "category": "agents",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "skill-installer",
+      "name": "skill-installer",
+      "category": "devops",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "skill-tree-engine",
+      "name": "skill-tree-engine",
+      "category": "agents",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "swarm-agent-framework",
+      "name": "swarm-agent-framework",
+      "category": "documents",
+      "completeness": "complete",
+      "hasScripts": true
+    },
+    {
+      "id": "tdd-rust",
+      "name": "tdd-rust",
+      "category": "general",
+      "completeness": "complete",
+      "hasScripts": true
+    }
+  ],
+  "categories_in_top50": [
+    "agents",
+    "data-api",
+    "devops",
+    "documents",
+    "general",
+    "media-comms"
+  ]
+}
