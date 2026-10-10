@@ -1,0 +1,57 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-10-10T13:43:47.390147Z",
+  "classes": [
+    {
+      "id": "Skill",
+      "def": "Structured capability module (SKILL.md + optional scripts/refs/assets)"
+    },
+    {
+      "id": "Tool",
+      "def": "Executable action available to an agent (builtin, MCP, or connected)"
+    },
+    {
+      "id": "Plugin",
+      "def": "Packaged extension contributing middleware, routers, or UI"
+    },
+    {
+      "id": "Service",
+      "def": "Long-running process in the topology"
+    },
+    {
+      "id": "Agent",
+      "def": "Lead or subagent that selects skills/tools to achieve goals"
+    },
+    {
+      "id": "Memory",
+      "def": "Persistent store of user/thread knowledge"
+    },
+    {
+      "id": "Sandbox",
+      "def": "Isolated execution environment for code and side effects"
+    },
+    {
+      "id": "Contract",
+      "def": "Cross-component JSON schema (e.g. skill_review)"
+    },
+    {
+      "id": "CatalogCluster",
+      "def": "Index node grouping many external catalog skills"
+    }
+  ],
+  "relations": [
+    "Skill uses Tool",
+    "Agent invokes Skill",
+    "Service hosts Agent",
+    "Plugin extends Service",
+    "Skill reviewed_by SkillReviewer",
+    "Tool served_by MCP|Builtin|Connected",
+    "Sandbox executes Tool side-effects"
+  ],
+  "invariants": [
+    "SKILL.md UTF-8; frontmatter name+description required",
+    "Version lockstep across backend/frontend/helm",
+    "Extensions from trusted operator sources only",
+    "skill_manage for skill persistence in DeerFlow sandbox"
+  ]
+}

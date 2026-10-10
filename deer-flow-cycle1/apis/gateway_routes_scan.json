@@ -1,0 +1,717 @@
+[
+  {
+    "method": "GET",
+    "path": "/health",
+    "file": "backend/app/gateway/app.py"
+  },
+  {
+    "method": "GET",
+    "path": "/health/ready",
+    "file": "backend/app/gateway/app.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{thread_id}",
+    "file": "backend/app/gateway/authz.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{thread_id}",
+    "file": "backend/app/gateway/authz.py"
+  },
+  {
+    "method": "GET",
+    "path": "/lark/status",
+    "file": "backend/app/gateway/routers/integrations.py"
+  },
+  {
+    "method": "POST",
+    "path": "/lark/install",
+    "file": "backend/app/gateway/routers/integrations.py"
+  },
+  {
+    "method": "POST",
+    "path": "/lark/config/start",
+    "file": "backend/app/gateway/routers/integrations.py"
+  },
+  {
+    "method": "POST",
+    "path": "/lark/config/complete",
+    "file": "backend/app/gateway/routers/integrations.py"
+  },
+  {
+    "method": "POST",
+    "path": "/lark/config/credentials",
+    "file": "backend/app/gateway/routers/integrations.py"
+  },
+  {
+    "method": "POST",
+    "path": "/lark/auth/start",
+    "file": "backend/app/gateway/routers/integrations.py"
+  },
+  {
+    "method": "POST",
+    "path": "/lark/auth/complete",
+    "file": "backend/app/gateway/routers/integrations.py"
+  },
+  {
+    "method": "POST",
+    "path": "/login/local",
+    "file": "backend/app/gateway/routers/auth.py"
+  },
+  {
+    "method": "POST",
+    "path": "/register",
+    "file": "backend/app/gateway/routers/auth.py"
+  },
+  {
+    "method": "POST",
+    "path": "/logout",
+    "file": "backend/app/gateway/routers/auth.py"
+  },
+  {
+    "method": "POST",
+    "path": "/change-password",
+    "file": "backend/app/gateway/routers/auth.py"
+  },
+  {
+    "method": "GET",
+    "path": "/me",
+    "file": "backend/app/gateway/routers/auth.py"
+  },
+  {
+    "method": "POST",
+    "path": "/pats",
+    "file": "backend/app/gateway/routers/auth.py"
+  },
+  {
+    "method": "GET",
+    "path": "/pats",
+    "file": "backend/app/gateway/routers/auth.py"
+  },
+  {
+    "method": "DELETE",
+    "path": "/pats/{pat_id}",
+    "file": "backend/app/gateway/routers/auth.py"
+  },
+  {
+    "method": "GET",
+    "path": "/setup-status",
+    "file": "backend/app/gateway/routers/auth.py"
+  },
+  {
+    "method": "POST",
+    "path": "/initialize",
+    "file": "backend/app/gateway/routers/auth.py"
+  },
+  {
+    "method": "GET",
+    "path": "/providers",
+    "file": "backend/app/gateway/routers/auth.py"
+  },
+  {
+    "method": "GET",
+    "path": "/oauth/{provider}",
+    "file": "backend/app/gateway/routers/auth.py"
+  },
+  {
+    "method": "GET",
+    "path": "/callback/{provider}",
+    "file": "backend/app/gateway/routers/auth.py"
+  },
+  {
+    "method": "GET",
+    "path": "/limits",
+    "file": "backend/app/gateway/routers/uploads.py"
+  },
+  {
+    "method": "GET",
+    "path": "/list",
+    "file": "backend/app/gateway/routers/uploads.py"
+  },
+  {
+    "method": "DELETE",
+    "path": "/{filename}",
+    "file": "backend/app/gateway/routers/uploads.py"
+  },
+  {
+    "method": "GET",
+    "path": "/config",
+    "file": "backend/app/gateway/routers/projects.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{project_id}",
+    "file": "backend/app/gateway/routers/projects.py"
+  },
+  {
+    "method": "PATCH",
+    "path": "/{project_id}",
+    "file": "backend/app/gateway/routers/projects.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{project_id}/archive",
+    "file": "backend/app/gateway/routers/projects.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{project_id}/restore",
+    "file": "backend/app/gateway/routers/projects.py"
+  },
+  {
+    "method": "DELETE",
+    "path": "/{project_id}",
+    "file": "backend/app/gateway/routers/projects.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{project_id}/threads",
+    "file": "backend/app/gateway/routers/projects.py"
+  },
+  {
+    "method": "POST",
+    "path": "/search",
+    "file": "backend/app/gateway/routers/assistants_compat.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{assistant_id}",
+    "file": "backend/app/gateway/routers/assistants_compat.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{assistant_id}/graph",
+    "file": "backend/app/gateway/routers/assistants_compat.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{assistant_id}/schemas",
+    "file": "backend/app/gateway/routers/assistants_compat.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{batch_id}",
+    "file": "backend/app/gateway/routers/subagent_batches.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{batch_id}/items",
+    "file": "backend/app/gateway/routers/subagent_batches.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{batch_id}/pause",
+    "file": "backend/app/gateway/routers/subagent_batches.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{batch_id}/resume",
+    "file": "backend/app/gateway/routers/subagent_batches.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{batch_id}/cancel",
+    "file": "backend/app/gateway/routers/subagent_batches.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{batch_id}/items/{item_id}/retry",
+    "file": "backend/app/gateway/routers/subagent_batches.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{batch_id}/results.jsonl",
+    "file": "backend/app/gateway/routers/subagent_batches.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{thread_id}/runs/regenerate/prepare",
+    "file": "backend/app/gateway/routers/thread_runs.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{thread_id}/runs/edit-regenerate/prepare",
+    "file": "backend/app/gateway/routers/thread_runs.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{thread_id}/runs",
+    "file": "backend/app/gateway/routers/thread_runs.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{thread_id}/runs/stream",
+    "file": "backend/app/gateway/routers/thread_runs.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{thread_id}/runs/wait",
+    "file": "backend/app/gateway/routers/thread_runs.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{thread_id}/runs",
+    "file": "backend/app/gateway/routers/thread_runs.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{thread_id}/runs/page",
+    "file": "backend/app/gateway/routers/thread_runs.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{thread_id}/runs/{run_id}",
+    "file": "backend/app/gateway/routers/thread_runs.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{thread_id}/runs/{run_id}/cancel",
+    "file": "backend/app/gateway/routers/thread_runs.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{thread_id}/runs/{run_id}/join",
+    "file": "backend/app/gateway/routers/thread_runs.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{thread_id}/runs/{run_id}/stream",
+    "file": "backend/app/gateway/routers/thread_runs.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{thread_id}/messages",
+    "file": "backend/app/gateway/routers/thread_runs.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{thread_id}/messages/page",
+    "file": "backend/app/gateway/routers/thread_runs.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{thread_id}/runs/{run_id}/messages",
+    "file": "backend/app/gateway/routers/thread_runs.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{thread_id}/runs/{run_id}/artifacts/archive",
+    "file": "backend/app/gateway/routers/thread_runs.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{thread_id}/runs/{run_id}/events",
+    "file": "backend/app/gateway/routers/thread_runs.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{thread_id}/runs/{run_id}/workspace-changes",
+    "file": "backend/app/gateway/routers/thread_runs.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{thread_id}/token-usage",
+    "file": "backend/app/gateway/routers/thread_runs.py"
+  },
+  {
+    "method": "GET",
+    "path": "/modules/{module}/{revision}.mjs",
+    "file": "backend/app/gateway/routers/plugins.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{namespace}/assets/{revision}/{path:path}",
+    "file": "backend/app/gateway/routers/plugins.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{namespace}/actions/{action_name}",
+    "file": "backend/app/gateway/routers/plugins.py"
+  },
+  {
+    "method": "POST",
+    "path": "/test",
+    "file": "backend/app/gateway/routers/managed_models.py"
+  },
+  {
+    "method": "PUT",
+    "path": "/{thread_id}/runs/{run_id}/feedback",
+    "file": "backend/app/gateway/routers/feedback.py"
+  },
+  {
+    "method": "DELETE",
+    "path": "/{thread_id}/runs/{run_id}/feedback",
+    "file": "backend/app/gateway/routers/feedback.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{thread_id}/runs/{run_id}/feedback",
+    "file": "backend/app/gateway/routers/feedback.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{thread_id}/runs/{run_id}/feedback",
+    "file": "backend/app/gateway/routers/feedback.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{thread_id}/runs/{run_id}/feedback/stats",
+    "file": "backend/app/gateway/routers/feedback.py"
+  },
+  {
+    "method": "DELETE",
+    "path": "/{thread_id}/runs/{run_id}/feedback/{feedback_id}",
+    "file": "backend/app/gateway/routers/feedback.py"
+  },
+  {
+    "method": "GET",
+    "path": "/retrieval-catalog/datasets",
+    "file": "backend/app/gateway/routers/knowledge.py"
+  },
+  {
+    "method": "GET",
+    "path": "/retrieval-catalog/datasets/{dataset_id}/documents",
+    "file": "backend/app/gateway/routers/knowledge.py"
+  },
+  {
+    "method": "POST",
+    "path": "/from-thread",
+    "file": "backend/app/gateway/routers/project_documents.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{document_id}/attach-to-thread/{thread_id}",
+    "file": "backend/app/gateway/routers/project_documents.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{document_id}/content",
+    "file": "backend/app/gateway/routers/project_documents.py"
+  },
+  {
+    "method": "DELETE",
+    "path": "/{document_id}",
+    "file": "backend/app/gateway/routers/project_documents.py"
+  },
+  {
+    "method": "GET",
+    "path": "/providers",
+    "file": "backend/app/gateway/routers/channel_connections.py"
+  },
+  {
+    "method": "GET",
+    "path": "/connections",
+    "file": "backend/app/gateway/routers/channel_connections.py"
+  },
+  {
+    "method": "DELETE",
+    "path": "/connections/{connection_id}",
+    "file": "backend/app/gateway/routers/channel_connections.py"
+  },
+  {
+    "method": "DELETE",
+    "path": "/{provider}/runtime-config",
+    "file": "backend/app/gateway/routers/channel_connections.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{provider}/connect",
+    "file": "backend/app/gateway/routers/channel_connections.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{provider}/runtime-config",
+    "file": "backend/app/gateway/routers/channel_connections.py"
+  },
+  {
+    "method": "POST",
+    "path": "/wechat/qr-login",
+    "file": "backend/app/gateway/routers/channel_connections.py"
+  },
+  {
+    "method": "POST",
+    "path": "/wechat/qr-login/{session_id}/poll",
+    "file": "backend/app/gateway/routers/channel_connections.py"
+  },
+  {
+    "method": "DELETE",
+    "path": "/wechat/qr-login/{session_id}",
+    "file": "backend/app/gateway/routers/channel_connections.py"
+  },
+  {
+    "method": "POST",
+    "path": "/servers",
+    "file": "backend/app/gateway/routers/personal_mcp.py"
+  },
+  {
+    "method": "PUT",
+    "path": "/server",
+    "file": "backend/app/gateway/routers/personal_mcp.py"
+  },
+  {
+    "method": "DELETE",
+    "path": "/servers/{server_name:path}",
+    "file": "backend/app/gateway/routers/personal_mcp.py"
+  },
+  {
+    "method": "GET",
+    "path": "/catalog",
+    "file": "backend/app/gateway/routers/capabilities.py"
+  },
+  {
+    "method": "GET",
+    "path": "/installations/{adapter}",
+    "file": "backend/app/gateway/routers/capabilities.py"
+  },
+  {
+    "method": "POST",
+    "path": "/installations",
+    "file": "backend/app/gateway/routers/capabilities.py"
+  },
+  {
+    "method": "POST",
+    "path": "/stream",
+    "file": "backend/app/gateway/routers/runs.py"
+  },
+  {
+    "method": "POST",
+    "path": "/wait",
+    "file": "backend/app/gateway/routers/runs.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{run_id}/messages",
+    "file": "backend/app/gateway/routers/runs.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{run_id}/feedback",
+    "file": "backend/app/gateway/routers/runs.py"
+  },
+  {
+    "method": "PUT",
+    "path": "/{name}",
+    "file": "backend/app/gateway/routers/subagents.py"
+  },
+  {
+    "method": "DELETE",
+    "path": "/{name}",
+    "file": "backend/app/gateway/routers/subagents.py"
+  },
+  {
+    "method": "GET",
+    "path": "/documents",
+    "file": "backend/app/gateway/routers/trash.py"
+  },
+  {
+    "method": "POST",
+    "path": "/documents/{document_id}/restore",
+    "file": "backend/app/gateway/routers/trash.py"
+  },
+  {
+    "method": "POST",
+    "path": "/documents/{document_id}/purge",
+    "file": "backend/app/gateway/routers/trash.py"
+  },
+  {
+    "method": "POST",
+    "path": "/purge",
+    "file": "backend/app/gateway/routers/trash.py"
+  },
+  {
+    "method": "POST",
+    "path": "/scheduled-tasks/preview-cron",
+    "file": "backend/app/gateway/routers/scheduled_tasks.py"
+  },
+  {
+    "method": "GET",
+    "path": "/scheduled-tasks",
+    "file": "backend/app/gateway/routers/scheduled_tasks.py"
+  },
+  {
+    "method": "POST",
+    "path": "/scheduled-tasks",
+    "file": "backend/app/gateway/routers/scheduled_tasks.py"
+  },
+  {
+    "method": "GET",
+    "path": "/scheduled-tasks/{task_id}",
+    "file": "backend/app/gateway/routers/scheduled_tasks.py"
+  },
+  {
+    "method": "PATCH",
+    "path": "/scheduled-tasks/{task_id}",
+    "file": "backend/app/gateway/routers/scheduled_tasks.py"
+  },
+  {
+    "method": "POST",
+    "path": "/scheduled-tasks/{task_id}/pause",
+    "file": "backend/app/gateway/routers/scheduled_tasks.py"
+  },
+  {
+    "method": "POST",
+    "path": "/scheduled-tasks/{task_id}/resume",
+    "file": "backend/app/gateway/routers/scheduled_tasks.py"
+  },
+  {
+    "method": "POST",
+    "path": "/scheduled-tasks/{task_id}/trigger",
+    "file": "backend/app/gateway/routers/scheduled_tasks.py"
+  },
+  {
+    "method": "DELETE",
+    "path": "/scheduled-tasks/{task_id}",
+    "file": "backend/app/gateway/routers/scheduled_tasks.py"
+  },
+  {
+    "method": "GET",
+    "path": "/scheduled-tasks/{task_id}/runs",
+    "file": "backend/app/gateway/routers/scheduled_tasks.py"
+  },
+  {
+    "method": "GET",
+    "path": "/threads/{thread_id}/scheduled-tasks",
+    "file": "backend/app/gateway/routers/scheduled_tasks.py"
+  },
+  {
+    "method": "GET",
+    "path": "/threads/{thread_id}/scheduled-task-events",
+    "file": "backend/app/gateway/routers/scheduled_tasks.py"
+  },
+  {
+    "method": "POST",
+    "path": "/github",
+    "file": "backend/app/gateway/routers/github_webhooks.py"
+  },
+  {
+    "method": "PATCH",
+    "path": "/{user_id}",
+    "file": "backend/app/gateway/routers/admin_users.py"
+  },
+  {
+    "method": "GET",
+    "path": "/skills/custom/{skill_name}/export-manifest",
+    "file": "backend/app/gateway/routers/skills.py"
+  },
+  {
+    "method": "GET",
+    "path": "/skills/custom/{skill_name}/export",
+    "file": "backend/app/gateway/routers/skills.py"
+  },
+  {
+    "method": "GET",
+    "path": "/skills/custom/{skill_name}",
+    "file": "backend/app/gateway/routers/skills.py"
+  },
+  {
+    "method": "PUT",
+    "path": "/skills/custom/{skill_name}",
+    "file": "backend/app/gateway/routers/skills.py"
+  },
+  {
+    "method": "DELETE",
+    "path": "/skills/custom/{skill_name}",
+    "file": "backend/app/gateway/routers/skills.py"
+  },
+  {
+    "method": "GET",
+    "path": "/skills/custom/{skill_name}/history",
+    "file": "backend/app/gateway/routers/skills.py"
+  },
+  {
+    "method": "POST",
+    "path": "/skills/custom/{skill_name}/rollback",
+    "file": "backend/app/gateway/routers/skills.py"
+  },
+  {
+    "method": "GET",
+    "path": "/",
+    "file": "backend/app/gateway/routers/channels.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{name}/restart",
+    "file": "backend/app/gateway/routers/channels.py"
+  },
+  {
+    "method": "DELETE",
+    "path": "/{thread_id}",
+    "file": "backend/app/gateway/routers/threads.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{thread_id}/branches",
+    "file": "backend/app/gateway/routers/threads.py"
+  },
+  {
+    "method": "POST",
+    "path": "/search",
+    "file": "backend/app/gateway/routers/threads.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{thread_id}/read",
+    "file": "backend/app/gateway/routers/threads.py"
+  },
+  {
+    "method": "PATCH",
+    "path": "/{thread_id}",
+    "file": "backend/app/gateway/routers/threads.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{thread_id}/move",
+    "file": "backend/app/gateway/routers/threads.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{thread_id}",
+    "file": "backend/app/gateway/routers/threads.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{thread_id}/goal",
+    "file": "backend/app/gateway/routers/threads.py"
+  },
+  {
+    "method": "PUT",
+    "path": "/{thread_id}/goal",
+    "file": "backend/app/gateway/routers/threads.py"
+  },
+  {
+    "method": "DELETE",
+    "path": "/{thread_id}/goal",
+    "file": "backend/app/gateway/routers/threads.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{thread_id}/compact",
+    "file": "backend/app/gateway/routers/threads.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{thread_id}/state",
+    "file": "backend/app/gateway/routers/threads.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{thread_id}/state",
+    "file": "backend/app/gateway/routers/threads.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{thread_id}/history",
+    "file": "backend/app/gateway/routers/threads.py"
+  },
+  {
+    "method": "GET",
+    "path": "/{task_id}",
+    "file": "backend/app/gateway/routers/mcp_tasks.py"
+  },
+  {
+    "method": "POST",
+    "path": "/{task_id}/cancel",
+    "file": "backend/app/gateway/routers/mcp_tasks.py"
+  }
+]

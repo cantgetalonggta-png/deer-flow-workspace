@@ -1,0 +1,3139 @@
+{
+  "engine": {
+    "version": "1.0.0",
+    "cycle": 1,
+    "updatedAt": "2026-10-10T13:43:47.390147Z",
+    "modes": [
+      "markdown",
+      "json",
+      "multi-agent",
+      "dashboard"
+    ],
+    "upgrades": [
+      "Added DeerFlow monorepo ingestion pipeline + catalog cluster atoms"
+    ]
+  },
+  "atoms": {
+    "sk_surprise-me": {
+      "id": "sk_surprise-me",
+      "name": "Surprise Me",
+      "definition": "Create a delightful, unexpected \"wow\" experience for the user by dynamically discovering and creatively combining other enabled skills. Triggers when the user says \"surprise me\" or any request expressing a desire for an unexpected creative showcase. Also triggers when the user is bored, wants inspiration, or asks for \"something interesting\".",
+      "purpose": "Create a delightful, unexpected \"wow\" experience for the user by dynamically discovering and creatively combining other enabled skills. Triggers when the user says \"surprise me\" or any request expressing a desire for an unexpected creative showcase. Also triggers when the user is bored, wants inspiration, or asks for \"something interesting\".",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "General",
+      "tags": [
+        "deerflow",
+        "deerflow"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": "skills/public/surprise-me/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_academic-paper-review": {
+      "id": "sk_academic-paper-review",
+      "name": "Academic Paper Review",
+      "definition": "Use this skill when the user requests to review, analyze, critique, or summarize academic papers, research articles, preprints, or scientific publications. Supports comprehensive structured reviews covering methodology assessment, contribution evaluation, literature positioning, and constructive feedback generation. Trigger on queries involving paper URLs, uploaded PDFs, arXiv links, or requests like \"review this paper\", \"analyze this research\", \"summarize this study\", or \"write a peer review\".",
+      "purpose": "Use this skill when the user requests to review, analyze, critique, or summarize academic papers, research articles, preprints, or scientific publications. Supports comprehensive structured reviews covering methodology assessment, contribution evaluation, literature positioning, and constructive feedback generation. Trigger on queries involving paper URLs, uploaded PDFs, arXiv links, or requests like \"review this paper\", \"analyze this research\", \"summarize this study\", or \"write a peer review\".",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Research",
+      "tags": [
+        "deerflow",
+        "deerflow"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": "skills/public/academic-paper-review/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_video-generation": {
+      "id": "sk_video-generation",
+      "name": "Video Generation",
+      "definition": "Use this skill when the user requests to generate, create, or imagine videos. Supports structured prompts and reference image for guided generation.",
+      "purpose": "Use this skill when the user requests to generate, create, or imagine videos. Supports structured prompts and reference image for guided generation.",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Media & Creative",
+      "tags": [
+        "deerflow",
+        "deerflow",
+        "has_scripts"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": "skills/public/video-generation/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_systematic-literature-review": {
+      "id": "sk_systematic-literature-review",
+      "name": "Systematic Literature Review",
+      "definition": "Use this skill when the user wants a systematic literature review, survey, or synthesis across multiple academic papers on a topic. Also covers annotated bibliographies and cross-paper comparisons. Searches arXiv and outputs reports in APA, IEEE, or BibTeX format. Not for single-paper tasks \u2014 use academic-paper-review for reviewing one paper.",
+      "purpose": "Use this skill when the user wants a systematic literature review, survey, or synthesis across multiple academic papers on a topic. Also covers annotated bibliographies and cross-paper comparisons. Searches arXiv and outputs reports in APA, IEEE, or BibTeX format. Not for single-paper tasks \u2014 use academic-paper-review for reviewing one paper.",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Research",
+      "tags": [
+        "deerflow",
+        "deerflow",
+        "has_scripts",
+        "has_refs"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": "skills/public/systematic-literature-review/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_skill-creator": {
+      "id": "sk_skill-creator",
+      "name": "Skill Creator",
+      "definition": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
+      "purpose": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Meta-Skills",
+      "tags": [
+        "deerflow",
+        "deerflow",
+        "has_scripts",
+        "has_refs"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": "skills/public/skill-creator/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_data-analysis": {
+      "id": "sk_data-analysis",
+      "name": "Data Analysis",
+      "definition": "Use this skill when the user uploads Excel (.xlsx/.xls) or CSV files and wants to perform data analysis, generate statistics, create summaries, pivot tables, SQL queries, or any form of structured data exploration. Supports multi-sheet Excel workbooks, aggregation, filtering, joins, and exporting results to CSV/JSON/Markdown.",
+      "purpose": "Use this skill when the user uploads Excel (.xlsx/.xls) or CSV files and wants to perform data analysis, generate statistics, create summaries, pivot tables, SQL queries, or any form of structured data exploration. Supports multi-sheet Excel workbooks, aggregation, filtering, joins, and exporting results to CSV/JSON/Markdown.",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Analysis",
+      "tags": [
+        "deerflow",
+        "deerflow",
+        "has_scripts"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": "skills/public/data-analysis/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_ppt-generation": {
+      "id": "sk_ppt-generation",
+      "name": "Ppt Generation",
+      "definition": "Use this skill when the user requests to generate, create, or make presentations (PPT/PPTX). Creates visually rich slides by generating images for each slide and composing them into a PowerPoint file.",
+      "purpose": "Use this skill when the user requests to generate, create, or make presentations (PPT/PPTX). Creates visually rich slides by generating images for each slide and composing them into a PowerPoint file.",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Media & Creative",
+      "tags": [
+        "deerflow",
+        "deerflow",
+        "has_scripts"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": "skills/public/ppt-generation/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_music-generation": {
+      "id": "sk_music-generation",
+      "name": "Music Generation",
+      "definition": "Use this skill when the user requests to generate, create, compose, or produce music or songs \u2014 background music, theme songs, jingles, or instrumental tracks. Generates a song from a style/mood prompt and optional lyrics via the MiniMax music API.",
+      "purpose": "Use this skill when the user requests to generate, create, compose, or produce music or songs \u2014 background music, theme songs, jingles, or instrumental tracks. Generates a song from a style/mood prompt and optional lyrics via the MiniMax music API.",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Media & Creative",
+      "tags": [
+        "deerflow",
+        "deerflow",
+        "has_scripts"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": "skills/public/music-generation/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_chart-visualization": {
+      "id": "sk_chart-visualization",
+      "name": "Chart Visualization",
+      "definition": "This skill should be used when the user wants to visualize data. It intelligently selects the most suitable chart type from 26 available options, extracts parameters based on detailed specifications, and generates a chart image using a JavaScript script.",
+      "purpose": "This skill should be used when the user wants to visualize data. It intelligently selects the most suitable chart type from 26 available options, extracts parameters based on detailed specifications, and generates a chart image using a JavaScript script.",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Media & Creative",
+      "tags": [
+        "deerflow",
+        "deerflow",
+        "has_scripts",
+        "has_refs"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": "skills/public/chart-visualization/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_deep-research": {
+      "id": "sk_deep-research",
+      "name": "Deep Research",
+      "definition": "Use this skill instead of WebSearch for ANY question requiring web research. Trigger on queries like \"what is X\", \"explain X\", \"compare X and Y\", \"research X\", or before content generation tasks. Provides systematic multi-angle research methodology instead of single superficial searches. Use this proactively when the user's question needs online information.",
+      "purpose": "Use this skill instead of WebSearch for ANY question requiring web research. Trigger on queries like \"what is X\", \"explain X\", \"compare X and Y\", \"research X\", or before content generation tasks. Provides systematic multi-angle research methodology instead of single superficial searches. Use this proactively when the user's question needs online information.",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Research",
+      "tags": [
+        "deerflow",
+        "deerflow"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": "skills/public/deep-research/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_bootstrap": {
+      "id": "sk_bootstrap",
+      "name": "bootstrap",
+      "definition": ">-",
+      "purpose": ">-",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Meta-Skills",
+      "tags": [
+        "deerflow",
+        "deerflow",
+        "has_refs"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": "skills/public/bootstrap/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_claude-to-deerflow": {
+      "id": "sk_claude-to-deerflow",
+      "name": "Claude To Deerflow",
+      "definition": "Interact with DeerFlow AI agent platform via its HTTP API. Use this skill when the user wants to send messages or questions to DeerFlow for research/analysis, start a DeerFlow conversation thread, check DeerFlow status or health, list available models/skills/agents in DeerFlow, manage DeerFlow memory, upload files to DeerFlow threads, or delegate complex research tasks to DeerFlow. Also use when the user mentions deerflow, deer flow, or wants to run a deep research task that DeerFlow can handle.",
+      "purpose": "Interact with DeerFlow AI agent platform via its HTTP API. Use this skill when the user wants to send messages or questions to DeerFlow for research/analysis, start a DeerFlow conversation thread, check DeerFlow status or health, list available models/skills/agents in DeerFlow, manage DeerFlow memory, upload files to DeerFlow threads, or delegate complex research tasks to DeerFlow. Also use when the user mentions deerflow, deer flow, or wants to run a deep research task that DeerFlow can handle.",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Research",
+      "tags": [
+        "deerflow",
+        "deerflow",
+        "has_scripts"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": "skills/public/claude-to-deerflow/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_skill-reviewer": {
+      "id": "sk_skill-reviewer",
+      "name": "Skill Reviewer",
+      "definition": "Reviews DeerFlow skill packages for readiness, triggers, safety boundaries, resources, and evidence. Invoke when users ask to audit, grade, or production-check an existing skill.",
+      "purpose": "Reviews DeerFlow skill packages for readiness, triggers, safety boundaries, resources, and evidence. Invoke when users ask to audit, grade, or production-check an existing skill.",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Meta-Skills",
+      "tags": [
+        "deerflow",
+        "deerflow",
+        "has_refs"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": "skills/public/skill-reviewer/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_podcast-generation": {
+      "id": "sk_podcast-generation",
+      "name": "Podcast Generation",
+      "definition": "Use this skill when the user requests to generate, create, or produce podcasts from text content. Converts written content into a two-host conversational podcast audio format with natural dialogue.",
+      "purpose": "Use this skill when the user requests to generate, create, or produce podcasts from text content. Converts written content into a two-host conversational podcast audio format with natural dialogue.",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Media & Creative",
+      "tags": [
+        "deerflow",
+        "deerflow",
+        "has_scripts",
+        "has_refs"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": "skills/public/podcast-generation/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_vercel-deploy": {
+      "id": "sk_vercel-deploy",
+      "name": "Vercel Deploy",
+      "definition": "Deploy applications and websites to Vercel. Use this skill when the user requests deployment actions such as \"Deploy my app\", \"Deploy this to production\", \"Create a preview deployment\", \"Deploy and give me the link\", or \"Push this live\". No authentication required - returns preview URL and claimable deployment link.",
+      "purpose": "Deploy applications and websites to Vercel. Use this skill when the user requests deployment actions such as \"Deploy my app\", \"Deploy this to production\", \"Create a preview deployment\", \"Deploy and give me the link\", or \"Push this live\". No authentication required - returns preview URL and claimable deployment link.",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Engineering & Ops",
+      "tags": [
+        "deerflow",
+        "deerflow",
+        "has_scripts"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": "skills/public/vercel-deploy/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_image-generation": {
+      "id": "sk_image-generation",
+      "name": "Image Generation",
+      "definition": "Use this skill when the user requests to generate, create, imagine, or visualize images including characters, scenes, products, or any visual content. Supports structured prompts and reference images for guided generation.",
+      "purpose": "Use this skill when the user requests to generate, create, imagine, or visualize images including characters, scenes, products, or any visual content. Supports structured prompts and reference images for guided generation.",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Media & Creative",
+      "tags": [
+        "deerflow",
+        "deerflow",
+        "has_scripts",
+        "has_refs"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": "skills/public/image-generation/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_web-design-guidelines": {
+      "id": "sk_web-design-guidelines",
+      "name": "Web Design Guidelines",
+      "definition": "Review UI code for Web Interface Guidelines compliance. Use when asked to \"review my UI\", \"check accessibility\", \"audit design\", \"review UX\", or \"check my site against best practices\".",
+      "purpose": "Review UI code for Web Interface Guidelines compliance. Use when asked to \"review my UI\", \"check accessibility\", \"audit design\", \"review UX\", or \"check my site against best practices\".",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Media & Creative",
+      "tags": [
+        "deerflow",
+        "deerflow"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": "skills/public/web-design-guidelines/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_frontend-design": {
+      "id": "sk_frontend-design",
+      "name": "Frontend Design",
+      "definition": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
+      "purpose": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Media & Creative",
+      "tags": [
+        "deerflow",
+        "deerflow"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": "skills/public/frontend-design/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_newsletter-generation": {
+      "id": "sk_newsletter-generation",
+      "name": "Newsletter Generation",
+      "definition": "Use this skill when the user requests to generate, create, write, or draft a newsletter, email digest, weekly roundup, industry briefing, or curated content summary. Supports topic-based research, content curation from multiple sources, and professional formatting for email or web distribution. Trigger on requests like \"create a newsletter about X\", \"write a weekly digest\", \"generate a tech roundup\", or \"curate news about Y\".",
+      "purpose": "Use this skill when the user requests to generate, create, write, or draft a newsletter, email digest, weekly roundup, industry briefing, or curated content summary. Supports topic-based research, content curation from multiple sources, and professional formatting for email or web distribution. Trigger on requests like \"create a newsletter about X\", \"write a weekly digest\", \"generate a tech roundup\", or \"curate news about Y\".",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Research",
+      "tags": [
+        "deerflow",
+        "deerflow"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": "skills/public/newsletter-generation/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_code-documentation": {
+      "id": "sk_code-documentation",
+      "name": "Code Documentation",
+      "definition": "Use this skill when the user requests to generate, create, or improve documentation for code, APIs, libraries, repositories, or software projects. Supports README generation, API reference documentation, inline code comments, architecture documentation, changelog generation, and developer guides. Trigger on requests like \"document this code\", \"create a README\", \"generate API docs\", \"write developer guide\", or when analyzing codebases for documentation purposes.",
+      "purpose": "Use this skill when the user requests to generate, create, or improve documentation for code, APIs, libraries, repositories, or software projects. Supports README generation, API reference documentation, inline code comments, architecture documentation, changelog generation, and developer guides. Trigger on requests like \"document this code\", \"create a README\", \"generate API docs\", \"write developer guide\", or when analyzing codebases for documentation purposes.",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Analysis",
+      "tags": [
+        "deerflow",
+        "deerflow"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": "skills/public/code-documentation/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_consulting-analysis": {
+      "id": "sk_consulting-analysis",
+      "name": "Consulting Analysis",
+      "definition": "Use this skill when the user requests to generate, create, or write professional research reports including but not limited to market analysis, consumer insights, brand analysis, financial analysis, industry research, competitive intelligence, investment due diligence, or any consulting-grade analytical report. This skill operates in two phases \u2014 (1) generating a structured analysis framework with chapter skeleton, data query requirements, and analysis logic, and (2) after data collection by oth",
+      "purpose": "Use this skill when the user requests to generate, create, or write professional research reports including but not limited to market analysis, consumer insights, brand analysis, financial analysis, industry research, competitive intelligence, investment due diligence, or any consulting-grade analytical report. This skill operates in two phases \u2014 (1) generating a structured analysis framework with chapter skeleton, data query requirements, and analysis logic, and (2) after data collection by oth",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Research",
+      "tags": [
+        "deerflow",
+        "deerflow"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": "skills/public/consulting-analysis/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_github-deep-research": {
+      "id": "sk_github-deep-research",
+      "name": "Github Deep Research",
+      "definition": "Conduct multi-round deep research on any GitHub Repo. Use when users request comprehensive analysis, timeline reconstruction, competitive analysis, or in-depth investigation of GitHub. Produces structured markdown reports with executive summaries, chronological timelines, metrics analysis, and Mermaid diagrams. Triggers on Github repository URL or open source projects.",
+      "purpose": "Conduct multi-round deep research on any GitHub Repo. Use when users request comprehensive analysis, timeline reconstruction, competitive analysis, or in-depth investigation of GitHub. Produces structured markdown reports with executive summaries, chronological timelines, metrics analysis, and Mermaid diagrams. Triggers on Github repository URL or open source projects.",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Research",
+      "tags": [
+        "deerflow",
+        "deerflow",
+        "has_scripts"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": "skills/public/github-deep-research/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_find-skills": {
+      "id": "sk_find-skills",
+      "name": "Find Skills",
+      "definition": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
+      "purpose": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Meta-Skills",
+      "tags": [
+        "deerflow",
+        "deerflow",
+        "has_scripts"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": "skills/public/find-skills/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_deerflow-maintainer-orchestrator": {
+      "id": "sk_deerflow-maintainer-orchestrator",
+      "name": "Deerflow Maintainer Orchestrator",
+      "definition": "Use when a DeerFlow maintainer needs comment-only GitHub issue or PR handling: resolve issue/PR scopes with gh, analyze issues, post or draft issue comments, perform PR review comments, review PR or issue batches, compare competing PRs that target the same issue, give fix strategy, risk classification, and validation guidance. Intended for maintainers and trusted local agents, not general contributors.",
+      "purpose": "Use when a DeerFlow maintainer needs comment-only GitHub issue or PR handling: resolve issue/PR scopes with gh, analyze issues, post or draft issue comments, perform PR review comments, review PR or issue batches, compare competing PRs that target the same issue, give fix strategy, risk classification, and validation guidance. Intended for maintainers and trusted local agents, not general contributors.",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Engineering & Ops",
+      "tags": [
+        "deerflow",
+        "deerflow"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": ".agent/skills/deerflow-maintainer-orchestrator/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_blocking-io-guard": {
+      "id": "sk_blocking-io-guard",
+      "name": "Blocking Io Guard",
+      "definition": "Ensure async-path backend code that could block the asyncio event loop is protected by a teeth-verified runtime anchor in tests/blocking_io/. Use when changing backend Python under app/, packages/harness/deerflow/, or scripts/, when running a blocking-IO triage round over the whole repo, or when a reviewer/CI asks for blocking-IO coverage. Runs a deterministic scan (changed-lines or full-repo), routes each candidate, drafts/extends an anchor, and proves it fails when the blocking IO regresses.",
+      "purpose": "Ensure async-path backend code that could block the asyncio event loop is protected by a teeth-verified runtime anchor in tests/blocking_io/. Use when changing backend Python under app/, packages/harness/deerflow/, or scripts/, when running a blocking-IO triage round over the whole repo, or when a reviewer/CI asks for blocking-IO coverage. Runs a deterministic scan (changed-lines or full-repo), routes each candidate, drafts/extends an anchor, and proves it fails when the blocking IO regresses.",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Engineering & Ops",
+      "tags": [
+        "deerflow",
+        "deerflow",
+        "has_refs"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": ".agent/skills/blocking-io-guard/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_smoke-test": {
+      "id": "sk_smoke-test",
+      "name": "Smoke Test",
+      "definition": "End-to-end smoke test skill for DeerFlow. Guides through: 1) Pulling latest code, 2) Docker OR Local installation and deployment (user preference, default to Local if Docker network issues), 3) Service availability verification, 4) Health check, 5) Final test report. Use when the user says \"run smoke test\", \"smoke test deployment\", \"verify installation\", \"test service availability\", \"end-to-end test\", or similar.",
+      "purpose": "End-to-end smoke test skill for DeerFlow. Guides through: 1) Pulling latest code, 2) Docker OR Local installation and deployment (user preference, default to Local if Docker network issues), 3) Service availability verification, 4) Health check, 5) Final test report. Use when the user says \"run smoke test\", \"smoke test deployment\", \"verify installation\", \"test service availability\", \"end-to-end test\", or similar.",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Engineering & Ops",
+      "tags": [
+        "deerflow",
+        "deerflow",
+        "has_scripts",
+        "has_refs"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": ".agent/skills/smoke-test/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_engineer-system-change": {
+      "id": "sk_engineer-system-change",
+      "name": "Engineer System Change",
+      "definition": "Evaluate and carry out non-trivial software-system changes from first principles. Use when assessing RFCs, issues, designs, features, refactors, migrations, dependency changes, or proposed fields, events, APIs, modules, and services whose need, consumers, system fit, validation, or rollback require scrutiny. Read the actual system, identify the concrete problem and named semantic consumers, choose the smallest sufficient solution, reject pseudo-requirements and speculative abstractions, and requ",
+      "purpose": "Evaluate and carry out non-trivial software-system changes from first principles. Use when assessing RFCs, issues, designs, features, refactors, migrations, dependency changes, or proposed fields, events, APIs, modules, and services whose need, consumers, system fit, validation, or rollback require scrutiny. Read the actual system, identify the concrete problem and named semantic consumers, choose the smallest sufficient solution, reject pseudo-requirements and speculative abstractions, and requ",
+      "inputs": [
+        "user_prompt",
+        "optional_files"
+      ],
+      "outputs": [
+        "skill_result",
+        "artifacts"
+      ],
+      "dependencies": [],
+      "subskills": [],
+      "domain": "Engineering & Ops",
+      "tags": [
+        "deerflow",
+        "deerflow"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "deerflow",
+        "path": ".agent/skills/engineer-system-change/SKILL.md"
+      },
+      "status": "active"
+    },
+    "sk_catalog_agents": {
+      "id": "sk_catalog_agents",
+      "name": "Catalog: agents",
+      "definition": "Skill catalog cluster for category 'agents' containing 11 skills.",
+      "purpose": "Index and navigate 11 catalog skills under agents",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "agent-orchestration",
+        "clawhub",
+        "coherent-communication",
+        "color",
+        "grok-4-20-multi-agent",
+        "image-gen-edit",
+        "pptx",
+        "prose",
+        "skill-creator",
+        "skill-tree-engine",
+        "tasks"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "agents"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 11
+      },
+      "status": "index"
+    },
+    "sk_catalog_ai": {
+      "id": "sk_catalog_ai",
+      "name": "Catalog: ai",
+      "definition": "Skill catalog cluster for category 'ai' containing 205 skills.",
+      "purpose": "Index and navigate 205 catalog skills under ai",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "imagine-grok-build",
+        "agent-development",
+        "before-you-build",
+        "block-no-verify-hook",
+        "capability-evolver",
+        "claude-automation-recommender",
+        "code-review-and-quality",
+        "context-engineering",
+        "docsbot-evals",
+        "docsbot-response-quality-admin-mcp",
+        "executing-plans",
+        "grounded-vault",
+        "hook-development",
+        "image-generation",
+        "langchain-architecture",
+        "llm-evaluation",
+        "mcp-builder",
+        "openai-doc",
+        "playground",
+        "prompt-engineering-patterns"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "ai"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 205
+      },
+      "status": "index"
+    },
+    "sk_catalog_browser_automation": {
+      "id": "sk_catalog_browser_automation",
+      "name": "Catalog: browser automation",
+      "definition": "Skill catalog cluster for category 'browser automation' containing 125 skills.",
+      "purpose": "Index and navigate 125 catalog skills under browser automation",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "agent-browser-operator",
+        "apply-site-specific-action-manuals-with-actionbook",
+        "author-and-run-regression-tests-with-agent-qa",
+        "backstopjs-visual-regression-testing-automation",
+        "benchmark-browser-agents-on-a-fixed-stealth-and-task-suite-with-browser-use-benc",
+        "benchmark-browser-agents-on-repeatable-playwright-web-tasks-with-bananalyzer",
+        "browse-from-mcp-clients-with-browser-use-mcp-server",
+        "browser-session-replay-analyzer",
+        "browser-use-agentic-browser-control",
+        "browser-use-ai-browser-automation-library",
+        "browser-use-web-agent-automation",
+        "browser-use-browser-automation-framework",
+        "browserable-self-hostable-browser-automation-ai-agents",
+        "browserbase-mcp-server",
+        "browserbase-session-automation-api-and-sdk",
+        "browserless-headless-browser-automation-infrastructure",
+        "camoufox-antidetect-browser-python",
+        "capture-responsive-website-screenshots-pageres",
+        "cdp-network-interception-logger",
+        "chrome-devtools-mcp-browser-debugging-performance-analysis"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "browser automation"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 125
+      },
+      "status": "index"
+    },
+    "sk_catalog_calendar_email_productivity": {
+      "id": "sk_catalog_calendar_email_productivity",
+      "name": "Catalog: calendar, email & productivity",
+      "definition": "Skill catalog cluster for category 'calendar, email & productivity' containing 127 skills.",
+      "purpose": "Index and navigate 127 catalog skills under calendar, email & productivity",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "activitywatch-automated-time-tracker",
+        "aerc-extensible-terminal-email-client",
+        "affine-knowledge-base-collaborative-workspace-platform",
+        "appflowy-open-source-collaborative-workspace",
+        "apply-repeatable-imap-rules-to-triage-and-clean-inboxes-with-imapfilter",
+        "atlassian-rovo-mcp-server",
+        "automate-lark-and-feishu-docs-sheets-mail-calendar-meetings-and-chat-tasks-from-",
+        "cal-com-open-source-scheduling-infrastructure-api",
+        "calcurse-text-calendar-scheduling",
+        "check-current-weather-and-short-forecasts-for-planning",
+        "connect-claude-code-to-apple-apps-and-tmux-with-claude-apple-bridges",
+        "design-lifecycle-email-sequences",
+        "discord-bot-manager",
+        "docmost-open-source-collaborative-wiki-documentation",
+        "documenso-open-source-document-signing",
+        "extract-structured-data-and-attachments-from-raw-email-mailparser",
+        "gcalcli-google-calendar-cli",
+        "gmail-api-thread-label-triage",
+        "gmail-thread-summarizer-action-extractor",
+        "google-calendar-conflict-detector"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "calendar, email & productivity"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 127
+      },
+      "status": "index"
+    },
+    "sk_catalog_ci_cd_integrations": {
+      "id": "sk_catalog_ci_cd_integrations",
+      "name": "Catalog: ci/cd integrations",
+      "definition": "Skill catalog cluster for category 'ci/cd integrations' containing 192 skills.",
+      "purpose": "Index and navigate 192 catalog skills under ci/cd integrations",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "act-local-github-actions-runner",
+        "advance-gitops-app-manifests-to-newer-container-tags-with-argo-cd-image-updater",
+        "argo-workflows-deployer",
+        "argo-workflows-linter",
+        "argocd-application-deployer",
+        "argocd-application-sync-manager-2",
+        "argocd-application-sync-monitor",
+        "argocd-deployment-monitor",
+        "argocd-deployment-sync-skill",
+        "argocd-gitops-sync-automator",
+        "argocd-gitops-sync-controller",
+        "argocd-gitops-sync-manager",
+        "argocd-gitops-sync-monitor",
+        "argocd-sync-drift-detector",
+        "argocd-sync-manager-skill",
+        "argocd-sync-orchestrator",
+        "argocd-sync-status-monitor-7",
+        "argocd-sync-troubleshooter",
+        "argocd-sync-wave-orchestrator-wave48",
+        "argocd-sync-wave-planner"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "ci/cd integrations"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 192
+      },
+      "status": "index"
+    },
+    "sk_catalog_cloud": {
+      "id": "sk_catalog_cloud",
+      "name": "Catalog: cloud",
+      "definition": "Skill catalog cluster for category 'cloud' containing 9 skills.",
+      "purpose": "Index and navigate 9 catalog skills under cloud",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "azure-devops",
+        "cloudflare-cloudflare",
+        "cloudflare-cloudflare-email-service",
+        "cloudflare-durable-objects",
+        "cloudflare-sandbox-sdk",
+        "cloudflare-web-perf",
+        "cloudflare-workers-best-practices",
+        "cloudflare-wrangler",
+        "hashicorp-azure-verified-modules"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "cloud"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 9
+      },
+      "status": "index"
+    },
+    "sk_catalog_code_quality_review": {
+      "id": "sk_catalog_code_quality_review",
+      "name": "Catalog: code quality & review",
+      "definition": "Skill catalog cluster for category 'code quality & review' containing 202 skills.",
+      "purpose": "Index and navigate 202 catalog skills under code quality & review",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "add-a-browser-review-checkpoint-before-risky-agent-actions-with-agentclick",
+        "address-github-pr-review-comments-from-the-current-branch-with-gh-address-commen",
+        "apply-git-branching-commit-and-pr-best-practices-through-git-workflow-skill",
+        "apply-repeatable-javascript-and-typescript-codemods-across-large-codebases-with-",
+        "ast-grep-structural-code-search-rewrite",
+        "audit-apple-platform-ui-work-against-human-interface-guidelines-with-hig-doctor",
+        "audit-python-dependency-declarations-before-release",
+        "autofix-common-nix-anti-patterns-before-style-drift-spreads-with-statix",
+        "axe-core-accessibility-testing-engine",
+        "benchmark-and-reduce-xcode-clean-and-incremental-build-times-with-xcode-build-op",
+        "benchmark-deep-research-agents-across-factual-quality-and-process-dimensions-wit",
+        "benchmark-openclaw-coding-agents-against-repeatable-real-tasks-before-rollout-wi",
+        "biome-high-performance-javascript-typescript-formatter-linter",
+        "broken-link-verification-static-sites-documentation",
+        "catch-benchmark-regressions-in-pull-requests-before-slowdowns-ship-with-codspeed",
+        "catch-common-misspellings-in-code-and-docs-before-review-churn-with-codespell",
+        "catch-silent-agent-regressions-by-diffing-outputs-and-tool-traces-in-ci-with-eva",
+        "codeclimate-diff-analyzer-2",
+        "codeclimate-maintainability-tracker-7",
+        "codecov-coverage-analyzer"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "code quality & review"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 202
+      },
+      "status": "index"
+    },
+    "sk_catalog_content_writing_seo": {
+      "id": "sk_catalog_content_writing_seo",
+      "name": "Catalog: content writing & seo",
+      "definition": "Skill catalog cluster for category 'content writing & seo' containing 94 skills.",
+      "purpose": "Index and navigate 94 catalog skills under content writing & seo",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "ahrefs-backlink-content-planner",
+        "ahrefs-content-gap-finder-agent",
+        "ahrefs-keyword-gap-analysis-skill",
+        "ai-content-readability-optimizer",
+        "ai-meta-description-generator",
+        "ai-powered-meta-description-writer",
+        "alex-inclusive-writing-linter",
+        "audit-ai-search-citation-readiness-with-geo-optimizer",
+        "audit-and-rewrite-ai-sounding-prose-with-avoid-ai-writing",
+        "audit-websites-for-ai-search-visibility-with-geo-seo-claude",
+        "build-versioned-technical-docs-sites-with-search-and-nav-using-material-for-mkdo",
+        "clean-chinese-ai-sounding-writing-with-shuorenhua",
+        "clearscope-nlp-grading-pipeline",
+        "content-brief-architect-agent",
+        "content-cannibalization-detector",
+        "content-readability-analyzer-agent",
+        "content-readability-optimizer",
+        "copyai-sales-email-sequence",
+        "diagnose-site-seo-issues-with-a-structured-audit",
+        "draft-and-audit-linkedin-content-with-linkedin-skills"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "content writing & seo"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 94
+      },
+      "status": "index"
+    },
+    "sk_catalog_data": {
+      "id": "sk_catalog_data",
+      "name": "Catalog: data",
+      "definition": "Skill catalog cluster for category 'data' containing 8 skills.",
+      "purpose": "Index and navigate 8 catalog skills under data",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "nodejs-backend-patterns",
+        "performance-optimization",
+        "sql-optimization-patterns",
+        "clickhouse-chdb-sql",
+        "neondatabase-claimable-postgres",
+        "neondatabase-neon-postgres",
+        "neondatabase-neon-postgres-egress-optimizer",
+        "supabase-postgres-best-practices"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "data"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 8
+      },
+      "status": "index"
+    },
+    "sk_catalog_data_extraction_transformation": {
+      "id": "sk_catalog_data_extraction_transformation",
+      "name": "Catalog: data extraction & transformation",
+      "definition": "Skill catalog cluster for category 'data extraction & transformation' containing 227 skills.",
+      "purpose": "Index and navigate 227 catalog skills under data extraction & transformation",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "add-postgres-native-vector-retrieval-to-agent-and-rag-workflows-with-pgvector",
+        "airbyte-connector-config-generator",
+        "anyquery-universal-sql-engine-mcp-integration",
+        "apache-airflow-mcp",
+        "apache-avro-schema-evolution-agent",
+        "apache-camel-route-data-mapper",
+        "apache-kafka-schema-extractor",
+        "kafka-schema-registry-extractor",
+        "kafka-schema-registry-validator",
+        "apache-kafka-stream-processor",
+        "apache-kafka-stream-transformer-2",
+        "spark-dataframe-etl-pipeline",
+        "apache-spark-job-manager",
+        "apache-superset-dashboard-sql-exploration-skill",
+        "apache-tika-content-extraction-hub",
+        "apache-tika-document-extractor",
+        "apache-tika-document-parser",
+        "apache-tika-document-parser-agent",
+        "audit-clickstream-analytics-with-retentioneering-agents",
+        "build-document-search-layers-for-ai-apps-with-morphik"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "data extraction & transformation"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 227
+      },
+      "status": "index"
+    },
+    "sk_catalog_data_api": {
+      "id": "sk_catalog_data_api",
+      "name": "Catalog: data-api",
+      "definition": "Skill catalog cluster for category 'data-api' containing 6 skills.",
+      "purpose": "Index and navigate 6 catalog skills under data-api",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "batch-api-wrapper",
+        "external-api-wrapper",
+        "mcporter",
+        "tmux",
+        "postgres",
+        "supabase"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "data-api"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 6
+      },
+      "status": "index"
+    },
+    "sk_catalog_developer_tools": {
+      "id": "sk_catalog_developer_tools",
+      "name": "Catalog: developer tools",
+      "definition": "Skill catalog cluster for category 'developer tools' containing 505 skills.",
+      "purpose": "Index and navigate 505 catalog skills under developer tools",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "add-claude-design-system-and-accessibility-workflows-with-ux-ui-agent-skills",
+        "add-shell-and-cli-smoke-tests-before-refactors-ship",
+        "add-ide-style-semantic-code-navigation-and-symbol-safe-refactors-to-coding-agent",
+        "add-managed-long-term-memory-to-langgraph-agents-with-langmem",
+        "add-persistent-project-memory-and-hook-driven-synthesis-with-claude-memory-kit",
+        "agno-multi-modal-agent-runtime-platform",
+        "aichat-llm-cli-shell-assistant-rag",
+        "aider-ai-pair-programming-cli-agent",
+        "amplication-open-source-backend-generation-platform",
+        "angular-typescript-web-framework",
+        "api-client-generator-skill",
+        "apply-structural-codemods-across-large-codebases-with-comby",
+        "appsmith-open-source-internal-tools-admin-panel-builder",
+        "argocd-mcp-server",
+        "astro-content-driven-web-framework",
+        "atuin-shell-history-database-sync",
+        "audit-and-deploy-cross-agent-extensions-with-harnesskit",
+        "audit-and-maintain-cross-agent-skill-libraries-with-chops",
+        "autogen-microsoft-multi-agent-framework",
+        "aws-lambda-mcp-server"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "developer tools"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 505
+      },
+      "status": "index"
+    },
+    "sk_catalog_devops": {
+      "id": "sk_catalog_devops",
+      "name": "Catalog: devops",
+      "definition": "Skill catalog cluster for category 'devops' containing 134 skills.",
+      "purpose": "Index and navigate 134 catalog skills under devops",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "blacksmith-testbox",
+        "docx",
+        "ethical-data-harvesting",
+        "ethical-scraper-orchestration",
+        "ffmpeg",
+        "finance",
+        "game-dev",
+        "github",
+        "grok-build-plugins",
+        "issue-triage",
+        "mcp",
+        "mega-skill",
+        "memory-edit",
+        "obsidian-vault-maintainer",
+        "oss-compliance-gate",
+        "pdf",
+        "play-billing-activation-detector",
+        "postgresql-sql",
+        "rtk-triage",
+        "self-dev-resources"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "devops"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 134
+      },
+      "status": "index"
+    },
+    "sk_catalog_docs": {
+      "id": "sk_catalog_docs",
+      "name": "Catalog: docs",
+      "definition": "Skill catalog cluster for category 'docs' containing 15 skills.",
+      "purpose": "Index and navigate 15 catalog skills under docs",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "a1-yandex-kit-catalog",
+        "a1-yandex-kit-orders",
+        "canvas-design",
+        "changelog-automation",
+        "dbt-transformation-patterns",
+        "docx-studio",
+        "file-conversion",
+        "pptx-studio",
+        "protocol-reverse-engineering",
+        "python-code-style",
+        "receipts",
+        "typst",
+        "crawlbase-crawl-markdown",
+        "ilovepdf-premium",
+        "managing-apple-notes"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "docs"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 15
+      },
+      "status": "index"
+    },
+    "sk_catalog_documents": {
+      "id": "sk_catalog_documents",
+      "name": "Catalog: documents",
+      "definition": "Skill catalog cluster for category 'documents' containing 15 skills.",
+      "purpose": "Index and navigate 15 catalog skills under documents",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "9000-word-minimum",
+        "apple-notes",
+        "common-sense-logic-critical-thinking",
+        "continue-next-or-continue",
+        "document-ingestion",
+        "document-intelligence",
+        "each-structured-prompt-research",
+        "epstein-pdf-batch-ingest",
+        "imagemagick",
+        "mongo-tom-roleplay",
+        "nano-pdf",
+        "next-investigation-trigger",
+        "pdf-page-section-breakdown",
+        "run-everything-activation",
+        "swarm-agent-framework"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "documents"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 15
+      },
+      "status": "index"
+    },
+    "sk_catalog_frontend": {
+      "id": "sk_catalog_frontend",
+      "name": "Catalog: frontend",
+      "definition": "Skill catalog cluster for category 'frontend' containing 34 skills.",
+      "purpose": "Index and navigate 34 catalog skills under frontend",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "design-ui",
+        "vite",
+        "angular-migration",
+        "brainstorming",
+        "design-system-patterns",
+        "frontend-design",
+        "interaction-design",
+        "javascript-testing-patterns",
+        "nextjs-app-router-patterns",
+        "plugin-structure",
+        "react-modernization",
+        "react-native-architecture",
+        "react-native-design",
+        "react-state-management",
+        "responsive-design",
+        "tailwind-design-system",
+        "unity-ecs-patterns",
+        "web-artifacts-builder",
+        "web-component-design",
+        "webapp-testing"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "frontend"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 34
+      },
+      "status": "index"
+    },
+    "sk_catalog_general": {
+      "id": "sk_catalog_general",
+      "name": "Catalog: general",
+      "definition": "Skill catalog cluster for category 'general' containing 724 skills.",
+      "purpose": "Index and navigate 724 catalog skills under general",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "archivist",
+        "auth",
+        "building-games",
+        "controls",
+        "game-animation-frames",
+        "game-asset-core",
+        "game-character-consistency",
+        "game-tilesets",
+        "game-ui-icons",
+        "generate2dmap",
+        "generate2dsprite",
+        "gog",
+        "multiplayer-p2p",
+        "neon",
+        "og",
+        "tdd-rust",
+        "tenant-misconceptions-rebuttal",
+        "threejs",
+        "tool-use",
+        "xai-api"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "general"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 724
+      },
+      "status": "index"
+    },
+    "sk_catalog_image_creative_automation": {
+      "id": "sk_catalog_image_creative_automation",
+      "name": "Catalog: image & creative automation",
+      "definition": "Skill catalog cluster for category 'image & creative automation' containing 113 skills.",
+      "purpose": "Index and navigate 113 catalog skills under image & creative automation",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "adobe-firefly-api-batch-image-generator",
+        "adobe-photoshop-api-batch-processor",
+        "apply-an-anti-ai-slop-design-workflow-to-pages-components-audits-and-redesigns-w",
+        "archive-and-reorganize-local-photo-libraries-with-photo-cli",
+        "auto-crop-images-around-the-most-important-subject-before-generating-thumbnails",
+        "bannerbear-dynamic-image-api",
+        "blender-geometry-nodes-script-generator",
+        "blurhash-compact-image-placeholder-encoder",
+        "bulk-import-and-reconcile-large-photo-archives-into-immich-without-manual-re-upl",
+        "cairosvg-svg-to-png-pdf-converter",
+        "chafa-terminal-image-graphics-renderer",
+        "cloudinary-asset-optimization-agent",
+        "cloudinary-dam-pipeline-skill",
+        "cloudinary-media-optimization-agent",
+        "cloudinary-media-transform-skill",
+        "comfyui-workflow-executor",
+        "create-sourced-explainer-videos-with-anything2explainer",
+        "create-voiceover-synced-explainer-videos-with-video-talkcraft",
+        "dalle-3-batch-asset-generator",
+        "dall-e-3-brand-asset-batch-generator"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "image & creative automation"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 113
+      },
+      "status": "index"
+    },
+    "sk_catalog_integrations_connectors": {
+      "id": "sk_catalog_integrations_connectors",
+      "name": "Catalog: integrations & connectors",
+      "definition": "Skill catalog cluster for category 'integrations & connectors' containing 176 skills.",
+      "purpose": "Index and navigate 176 catalog skills under integrations & connectors",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "activepieces-open-source-workflow-automation",
+        "add-multimodal-lifelong-memory-to-mcp-and-python-agents-with-simplemem",
+        "add-temporal-context-memory-to-agent-workflows-with-zep",
+        "airbyte-open-source-data-integration-platform",
+        "appwrite-open-source-backend-as-a-service-platform",
+        "appwrite-open-source-backend-platform",
+        "assemblyai-realtime-call-intelligence",
+        "atlassian-mcp-server-jira-confluence",
+        "automation-integration-preflight",
+        "aws-mcp-servers-cloud-service-integration",
+        "aws-s3-sqs-pipeline-connector",
+        "beachfinder-swim-spot-finder",
+        "bootstrap-openapi-spec-from-captured-api-traffic-before-client-or-test-automatio",
+        "bridge-coding-agents-into-chat-channels-with-golembot",
+        "bridge-local-coding-agents-into-chat-apps-with-cc-connect",
+        "build-and-inspect-mcp-apps-and-servers-with-mcp-use",
+        "build-and-validate-shopify-apps-with-the-official-shopify-ai-toolkit",
+        "build-authenticated-mcp-servers-from-python-files-with-golf",
+        "build-authenticated-mcp-tools-and-servers-with-arcade-mcp",
+        "build-deterministic-saas-api-test-worlds-for-agents-with-backlot"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "integrations & connectors"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 176
+      },
+      "status": "index"
+    },
+    "sk_catalog_library_api_reference": {
+      "id": "sk_catalog_library_api_reference",
+      "name": "Catalog: library & api reference",
+      "definition": "Skill catalog cluster for category 'library & api reference' containing 130 skills.",
+      "purpose": "Index and navigate 130 catalog skills under library & api reference",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "anthropic-sdk-token-usage-logger",
+        "aperture-wallet-guide",
+        "api-documentation-indexer",
+        "asharehub",
+        "asyncapi-event-catalog-builder",
+        "asyncapi-event-catalog-generator",
+        "aws-sdk-method-resolver",
+        "bubble-tea-go-tui-framework",
+        "buf-protobuf-linter",
+        "build-mcp-servers-and-clients-for-php-applications-with-the-official-php-sdk",
+        "build-source-owned-api-and-mcp-documentation-with-sourcey",
+        "build-temporal-context-graphs-for-agent-memory-from-evolving-facts-with-graphiti",
+        "bundle-and-validate-openapi-files-into-one-publishable-spec-with-swagger-cli",
+        "compile-agent-ready-documentation-bundles-with-docmd",
+        "context7-mcp-documentation-server-llm-code-editors",
+        "devdocs-unified-api-documentation-browser",
+        "docker-image-layer-analyzer",
+        "doxygen-cross-reference-indexer",
+        "effect-typescript-standard-library-production",
+        "filepond-javascript-file-upload-library"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "library & api reference"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 130
+      },
+      "status": "index"
+    },
+    "sk_catalog_media": {
+      "id": "sk_catalog_media",
+      "name": "Catalog: media",
+      "definition": "Skill catalog cluster for category 'media' containing 20 skills.",
+      "purpose": "Index and navigate 20 catalog skills under media",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "video2dsprite",
+        "connectivity-triage",
+        "screen-reader-testing",
+        "vision-sft",
+        "youtube",
+        "ai-faceless-video-generator",
+        "ai-video-gen",
+        "ai-video-remix",
+        "best-image",
+        "best-image-generation",
+        "clawdbot-skill-voice-wake-say",
+        "invideo-alternative",
+        "netlify-netlify-image-cdn",
+        "superwhisper",
+        "veniceai-venice-audio-music",
+        "veniceai-venice-audio-speech",
+        "veniceai-venice-audio-transcription",
+        "veniceai-venice-image-edit",
+        "veniceai-venice-image-generate",
+        "veniceai-venice-video"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "media"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 20
+      },
+      "status": "index"
+    },
+    "sk_catalog_media_transcription": {
+      "id": "sk_catalog_media_transcription",
+      "name": "Catalog: media & transcription",
+      "definition": "Skill catalog cluster for category 'media & transcription' containing 109 skills.",
+      "purpose": "Index and navigate 109 catalog skills under media & transcription",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "analyze-videos-with-frame-extraction-and-audio-context-in-claude-code",
+        "archive-online-videos-and-metadata-to-the-internet-archive-with-tubeup",
+        "assemblyai-audio-intelligence-agent",
+        "assemblyai-lemur-summarizer-agent",
+        "assemblyai-summarization-chapters-skill",
+        "audio-fingerprint-identifier-agent",
+        "audio-stem-separator-demucs",
+        "audiobookshelf-self-hosted-audiobook-podcast-server-api",
+        "audioflux-audio-music-analysis-feature-extraction-library",
+        "audiowaveform-bbc-waveform-generator",
+        "auto-editor-automated-video-audio-silence-trimmer-cli",
+        "beets-music-library-manager-tagger",
+        "brainiall-diarized-transcription",
+        "build-streaming-voice-llm-agents-with-vocode",
+        "build-voice-and-multimodal-agents-with-pipecat",
+        "capture-live-transcripts-and-searchable-meeting-memory-for-agents-with-minutes",
+        "capture-local-screen-and-audio-context-so-agents-can-search-what-happened-on-you",
+        "capture-polished-terminal-screenshots-for-docs-and-changelogs-with-termshot",
+        "capture-youtube-transcripts-without-browser-automation-using-youtube-transcript-",
+        "cartesia-javascript-sdk-low-latency-voice-generation"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "media & transcription"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 109
+      },
+      "status": "index"
+    },
+    "sk_catalog_media_comms": {
+      "id": "sk_catalog_media_comms",
+      "name": "Catalog: media-comms",
+      "definition": "Skill catalog cluster for category 'media-comms' containing 6 skills.",
+      "purpose": "Index and navigate 6 catalog skills under media-comms",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "bluebubbles",
+        "omnivoice-api",
+        "openai-whisper-api",
+        "qqbot-channel",
+        "video-frames",
+        "wacli"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "media-comms"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 6
+      },
+      "status": "index"
+    },
+    "sk_catalog_mobile": {
+      "id": "sk_catalog_mobile",
+      "name": "Catalog: mobile",
+      "definition": "Skill catalog cluster for category 'mobile' containing 2 skills.",
+      "purpose": "Index and navigate 2 catalog skills under mobile",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "kpi-dashboard-design",
+        "mobile-android-design"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "mobile"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 2
+      },
+      "status": "index"
+    },
+    "sk_catalog_monitoring_alerts": {
+      "id": "sk_catalog_monitoring_alerts",
+      "name": "Catalog: monitoring & alerts",
+      "definition": "Skill catalog cluster for category 'monitoring & alerts' containing 161 skills.",
+      "purpose": "Index and navigate 161 catalog skills under monitoring & alerts",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "apprise-universal-push-notification-library-cli",
+        "audit-coding-agent-token-spend-with-codeburn",
+        "auto-instrument-kubernetes-apps-with-odigos",
+        "aws-cloudwatch-anomaly-detector",
+        "aws-cloudwatch-composite-alarm-builder",
+        "aws-cloudwatch-insights-agent",
+        "aws-cloudwatch-insights-query-builder",
+        "build-and-optimize-agent-eval-workflows-with-kiln",
+        "chartbrew-open-source-reporting-dashboard-platform",
+        "checkly-browser-check-failure-notifier",
+        "checkly-cli-monitoring-as-code-for-api-and-browser-checks",
+        "checkmate-open-source-uptime-infrastructure-monitoring",
+        "cloudflare-analytics-health-monitor",
+        "cloudwatch-anomaly-detector",
+        "cloudwatch-intelligent-alarms",
+        "cloudwatch-log-anomaly-detector",
+        "configure-and-interpret-launchdarkly-ai-config-online-evaluations-with-judge-att",
+        "control-launch-behavior-with-go-feature-flag",
+        "cronitor-cli-cron-monitoring-job-telemetry",
+        "datadog-anomaly-alert-router"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "monitoring & alerts"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 161
+      },
+      "status": "index"
+    },
+    "sk_catalog_payments": {
+      "id": "sk_catalog_payments",
+      "name": "Catalog: payments",
+      "definition": "Skill catalog cluster for category 'payments' containing 10 skills.",
+      "purpose": "Index and navigate 10 catalog skills under payments",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "a1-yandex-kit-launch-check",
+        "billing-automation",
+        "paypal-integration",
+        "stripe-integration",
+        "invoice-ninja",
+        "paddle",
+        "stripe",
+        "stripe-stripe-best-practices",
+        "stripe-upgrade-stripe",
+        "veniceai-venice-billing"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "payments"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 10
+      },
+      "status": "index"
+    },
+    "sk_catalog_python": {
+      "id": "sk_catalog_python",
+      "name": "Catalog: python",
+      "definition": "Skill catalog cluster for category 'python' containing 16 skills.",
+      "purpose": "Index and navigate 16 catalog skills under python",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "build-mcpb",
+        "cardputer-buddy",
+        "m5-onboard",
+        "python-anti-patterns",
+        "python-background-jobs",
+        "python-error-handling",
+        "python-packaging",
+        "python-performance-optimization",
+        "python-project-structure",
+        "python-resilience",
+        "python-resource-management",
+        "python-testing-patterns",
+        "python-type-safety",
+        "temporal-python-testing",
+        "serpapi-serpapi-search-tools-python",
+        "tinybirdco-tinybird-python-sdk-guidelines"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "python"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 16
+      },
+      "status": "index"
+    },
+    "sk_catalog_reference": {
+      "id": "sk_catalog_reference",
+      "name": "Catalog: reference",
+      "definition": "Skill catalog cluster for category 'reference' containing 6 skills.",
+      "purpose": "Index and navigate 6 catalog skills under reference",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "command-development",
+        "dataset-curation",
+        "example-skill",
+        "pptx-reference-deck-analysis",
+        "preference-optimization",
+        "trace-to-training-data"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "reference"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 6
+      },
+      "status": "index"
+    },
+    "sk_catalog_research_scraping": {
+      "id": "sk_catalog_research_scraping",
+      "name": "Catalog: research & scraping",
+      "definition": "Skill catalog cluster for category 'research & scraping' containing 135 skills.",
+      "purpose": "Index and navigate 135 catalog skills under research & scraping",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "academic-paper-citation-network-mapper",
+        "agentql-natural-language-web-query-sdk-extraction-automation",
+        "apify-actor-development-kit",
+        "apify-actor-runner",
+        "apify-actor-web-crawler",
+        "apify-actor-web-intelligence-agent",
+        "apify-sdk-web-scraping-actor-automation",
+        "apify-web-scraper-orchestrator-3",
+        "automate-grounded-notebooklm-research-and-artifact-export-with-notebooklm-py",
+        "automate-notebooklm-studio-generation-and-cited-research-batches-with-notebooklm",
+        "beautifulsoup-academic-paper-parser",
+        "brave-search-mcp-server-ai-web-search",
+        "bright-data-web-mcp-live-web-access-scraping-tools",
+        "browse-search-and-cost-audit-local-coding-agent-histories-before-resuming-or-sta",
+        "browserless-scraping-agent",
+        "browsertrix-crawler-high-fidelity-web-archiving-qa-crawler",
+        "capture-a-live-webpage-as-a-clean-pdf-or-readable-archive-for-offline-review-wit",
+        "censys-attack-surface-monitor",
+        "changedetection-io-website-change-monitor",
+        "cheerio-dom-scraping-toolkit"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "research & scraping"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 135
+      },
+      "status": "index"
+    },
+    "sk_catalog_runbooks_diagnostics": {
+      "id": "sk_catalog_runbooks_diagnostics",
+      "name": "Catalog: runbooks & diagnostics",
+      "definition": "Skill catalog cluster for category 'runbooks & diagnostics' containing 178 skills.",
+      "purpose": "Index and navigate 178 catalog skills under runbooks & diagnostics",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "analyze-kubernetes-cluster-issues-through-mcp-with-k8sgpt",
+        "analyze-memory-images-for-processes-modules-and-malware-indicators-with-volatili",
+        "ansible-playbook-debugger",
+        "ansible-playbook-diagnostics-runner",
+        "ansible-playbook-dry-run-validator",
+        "ansible-playbook-dry-run-analyzer",
+        "ansible-playbook-dryrun-validator-agent",
+        "ansible-playbook-linter-pro",
+        "ansible-playbook-vault-runner",
+        "ansible-runbook-executor",
+        "apache-kafka-consumer-lag-runbook",
+        "argocd-application-health-runbook",
+        "argocd-deployment-runbook-agent",
+        "aws-cloudformation-drift-detector-4",
+        "aws-cloudformation-stack-diagnostics",
+        "aws-cloudwatch-alarm-diagnostic",
+        "aws-cloudwatch-alarm-runbook-wave48",
+        "aws-cloudwatch-alarm-runbook-generator",
+        "aws-cloudwatch-alarm-triage-5",
+        "aws-cloudwatch-alarm-triage-agent"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "runbooks & diagnostics"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 178
+      },
+      "status": "index"
+    },
+    "sk_catalog_security": {
+      "id": "sk_catalog_security",
+      "name": "Catalog: security",
+      "definition": "Skill catalog cluster for category 'security' containing 44 skills.",
+      "purpose": "Index and navigate 44 catalog skills under security",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "a1-yandex-kit-catalog-doctor",
+        "accessibility-compliance",
+        "anti-reversing-techniques",
+        "attack-tree-construction",
+        "auth-implementation-patterns",
+        "avoid-ai-writing",
+        "claude-md-improver",
+        "claude-security",
+        "deployment-pipeline-design",
+        "doubt-driven-development",
+        "k8s-manifest-generator",
+        "k8s-security-policies",
+        "linkerd-patterns",
+        "on-call-handoff-patterns",
+        "pci-compliance",
+        "protect-mcp-setup",
+        "review-agent-setup",
+        "sast-configuration",
+        "security-and-hardening",
+        "security-requirement-extraction"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "security"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 44
+      },
+      "status": "index"
+    },
+    "sk_catalog_security_verification": {
+      "id": "sk_catalog_security_verification",
+      "name": "Catalog: security & verification",
+      "definition": "Skill catalog cluster for category 'security & verification' containing 251 skills.",
+      "purpose": "Index and navigate 251 catalog skills under security & verification",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "ab-test-agent-skills-mcp-changes-with-caliper",
+        "add-runtime-guardrails-to-typescript-agents-with-voltagent",
+        "age-modern-file-encryption-tool",
+        "apply-rule-based-guardrails-to-agent-traces-and-tool-flows-with-invariant",
+        "assemble-minimal-oci-images-from-declarative-package-configs-with-apko",
+        "audit-and-normalize-spdx-license-headers-before-releasing-or-open-sourcing-a-rep",
+        "audit-aws-iam-policies-for-risky-permissions-with-cloudsplaining",
+        "audit-cloud-accounts-for-security-misconfigurations-with-prowler",
+        "audit-github-actions-for-privilege-and-supply-chain-risks-with-zizmor",
+        "audit-github-actions-workflows-for-insecure-permissions-and-unpinned-actions",
+        "audit-go-dependency-licenses-with-go-licenses",
+        "audit-linux-host-hardening-drift-before-exposing-ssh-or-rolling-to-production",
+        "audit-openclaw-host-security-posture-and-hardening-gaps",
+        "audit-python-dependency-sets-for-known-vulnerabilities-before-release-or-environ",
+        "audit-python-environments-and-requirements-files-for-known-vulnerabilities-with-",
+        "audit-ssh-servers-and-clients-for-weak-algorithms-and-risky-config-drift-with-ss",
+        "aws-cloudtrail-log-normalizer",
+        "aws-iam-privilege-escalation-audit",
+        "baseline-and-review-repository-secret-findings-with-detect-secrets",
+        "bearer-cli-sast-code-security-privacy-scanner"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "security & verification"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 251
+      },
+      "status": "index"
+    },
+    "sk_catalog_templates_workflows": {
+      "id": "sk_catalog_templates_workflows",
+      "name": "Catalog: templates & workflows",
+      "definition": "Skill catalog cluster for category 'templates & workflows' containing 258 skills.",
+      "purpose": "Index and navigate 258 catalog skills under templates & workflows",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "add-graph-backed-memory-and-context-retrieval-to-agent-workflows",
+        "ansible-playbook-linter-2",
+        "ansible-playbook-runner",
+        "ansible-playbook-template-generator",
+        "ansible-playbook-template-library",
+        "argo-workflows-dag-optimizer",
+        "argo-workflows-dag-pipeline-builder",
+        "assemble-production-agent-harnesses-with-deepagents",
+        "automate-ml-research-loops-with-aris-skills",
+        "automate-repository-triage-and-recurring-maintenance-with-github-agent-workflows",
+        "autonomous-session-workflow",
+        "aws-cdk-scaffolder",
+        "backstage-software-catalog-sync",
+        "backstage-software-template-composer",
+        "book-to-mentor",
+        "boot-and-supervise-local-multi-service-process-stacks-from-one-declarative-file-",
+        "break-large-coding-jobs-into-focused-subagent-missions-with-ab-method",
+        "bubble-stripe-subscription-portal",
+        "build-a-local-work-assistant-with-10xproductivity",
+        "build-a-self-updating-agent-memory-graph-with-gbrain"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "templates & workflows"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 258
+      },
+      "status": "index"
+    },
+    "sk_catalog_wordpress_cms": {
+      "id": "sk_catalog_wordpress_cms",
+      "name": "Catalog: wordpress & cms",
+      "definition": "Skill catalog cluster for category 'wordpress & cms' containing 96 skills.",
+      "purpose": "Index and navigate 96 catalog skills under wordpress & cms",
+      "inputs": [
+        "query"
+      ],
+      "outputs": [
+        "skill_matches"
+      ],
+      "dependencies": [],
+      "subskills": [
+        "acf-custom-fields-rest-exposer",
+        "acf-extended-advanced-custom-fields-workflows",
+        "acf-to-gutenberg-block-migrator",
+        "advanced-custom-fields-rest-schema-mapper",
+        "ai-engine-wordpress-mcp-server-and-ai-automation",
+        "apostrophecms-full-stack-nodejs-cms-in-context-editing",
+        "automattic-wordpress-remote-mcp",
+        "bedrock-wordpress-composer-boilerplate-roots",
+        "build-and-debug-custom-wordpress-rest-api-endpoints-with-schema-and-permission-g",
+        "build-and-debug-interactive-wordpress-frontends-with-data-wp-directives",
+        "cockpit-cms-headless-content-platform-rest-graphql-apis",
+        "contact-form-7-wordpress-form-builder-mail-integration",
+        "contentful-management-api-and-javascript-sdk",
+        "decap-cms-git-based-content-management-static-sites",
+        "decap-cms-git-based-content-management-system-for-static-sites",
+        "develop-and-harden-wordpress-plugins-with-lifecycle-and-security-guardrails",
+        "diagnose-wordpress-repo-structure-and-route-follow-up-work-safely",
+        "directus-open-source-headless-cms-backend-platform",
+        "directus-sql-native-headless-cms-internal-app-platform",
+        "elasticpress-wordpress-elasticsearch-integration-10up"
+      ],
+      "domain": "Catalog",
+      "tags": [
+        "catalog",
+        "cluster",
+        "wordpress & cms"
+      ],
+      "version": "1.0.0",
+      "lineage": {
+        "source": "catalog.json",
+        "count": 96
+      },
+      "status": "index"
+    }
+  },
+  "masterSkillsTree": {
+    "id": "root",
+    "name": "Master Skills Tree",
+    "atomId": null,
+    "children": [
+      {
+        "id": "dom_analysis",
+        "name": "Analysis",
+        "atomId": null,
+        "children": [
+          {
+            "id": "sk_code-documentation",
+            "name": "Code Documentation",
+            "atomId": "sk_code-documentation",
+            "children": []
+          },
+          {
+            "id": "sk_data-analysis",
+            "name": "Data Analysis",
+            "atomId": "sk_data-analysis",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "dom_catalog",
+        "name": "Catalog",
+        "atomId": null,
+        "children": [
+          {
+            "id": "sk_catalog_agents",
+            "name": "Catalog: agents",
+            "atomId": "sk_catalog_agents",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_ai",
+            "name": "Catalog: ai",
+            "atomId": "sk_catalog_ai",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_browser_automation",
+            "name": "Catalog: browser automation",
+            "atomId": "sk_catalog_browser_automation",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_calendar_email_productivity",
+            "name": "Catalog: calendar, email & productivity",
+            "atomId": "sk_catalog_calendar_email_productivity",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_ci_cd_integrations",
+            "name": "Catalog: ci/cd integrations",
+            "atomId": "sk_catalog_ci_cd_integrations",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_cloud",
+            "name": "Catalog: cloud",
+            "atomId": "sk_catalog_cloud",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_code_quality_review",
+            "name": "Catalog: code quality & review",
+            "atomId": "sk_catalog_code_quality_review",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_content_writing_seo",
+            "name": "Catalog: content writing & seo",
+            "atomId": "sk_catalog_content_writing_seo",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_data",
+            "name": "Catalog: data",
+            "atomId": "sk_catalog_data",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_data_api",
+            "name": "Catalog: data-api",
+            "atomId": "sk_catalog_data_api",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_data_extraction_transformation",
+            "name": "Catalog: data extraction & transformation",
+            "atomId": "sk_catalog_data_extraction_transformation",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_developer_tools",
+            "name": "Catalog: developer tools",
+            "atomId": "sk_catalog_developer_tools",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_devops",
+            "name": "Catalog: devops",
+            "atomId": "sk_catalog_devops",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_docs",
+            "name": "Catalog: docs",
+            "atomId": "sk_catalog_docs",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_documents",
+            "name": "Catalog: documents",
+            "atomId": "sk_catalog_documents",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_frontend",
+            "name": "Catalog: frontend",
+            "atomId": "sk_catalog_frontend",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_general",
+            "name": "Catalog: general",
+            "atomId": "sk_catalog_general",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_image_creative_automation",
+            "name": "Catalog: image & creative automation",
+            "atomId": "sk_catalog_image_creative_automation",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_integrations_connectors",
+            "name": "Catalog: integrations & connectors",
+            "atomId": "sk_catalog_integrations_connectors",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_library_api_reference",
+            "name": "Catalog: library & api reference",
+            "atomId": "sk_catalog_library_api_reference",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_media",
+            "name": "Catalog: media",
+            "atomId": "sk_catalog_media",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_media_comms",
+            "name": "Catalog: media-comms",
+            "atomId": "sk_catalog_media_comms",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_media_transcription",
+            "name": "Catalog: media & transcription",
+            "atomId": "sk_catalog_media_transcription",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_mobile",
+            "name": "Catalog: mobile",
+            "atomId": "sk_catalog_mobile",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_monitoring_alerts",
+            "name": "Catalog: monitoring & alerts",
+            "atomId": "sk_catalog_monitoring_alerts",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_payments",
+            "name": "Catalog: payments",
+            "atomId": "sk_catalog_payments",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_python",
+            "name": "Catalog: python",
+            "atomId": "sk_catalog_python",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_reference",
+            "name": "Catalog: reference",
+            "atomId": "sk_catalog_reference",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_research_scraping",
+            "name": "Catalog: research & scraping",
+            "atomId": "sk_catalog_research_scraping",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_runbooks_diagnostics",
+            "name": "Catalog: runbooks & diagnostics",
+            "atomId": "sk_catalog_runbooks_diagnostics",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_security",
+            "name": "Catalog: security",
+            "atomId": "sk_catalog_security",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_security_verification",
+            "name": "Catalog: security & verification",
+            "atomId": "sk_catalog_security_verification",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_templates_workflows",
+            "name": "Catalog: templates & workflows",
+            "atomId": "sk_catalog_templates_workflows",
+            "children": []
+          },
+          {
+            "id": "sk_catalog_wordpress_cms",
+            "name": "Catalog: wordpress & cms",
+            "atomId": "sk_catalog_wordpress_cms",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "dom_engineering_ops",
+        "name": "Engineering & Ops",
+        "atomId": null,
+        "children": [
+          {
+            "id": "sk_blocking-io-guard",
+            "name": "Blocking Io Guard",
+            "atomId": "sk_blocking-io-guard",
+            "children": []
+          },
+          {
+            "id": "sk_deerflow-maintainer-orchestrator",
+            "name": "Deerflow Maintainer Orchestrator",
+            "atomId": "sk_deerflow-maintainer-orchestrator",
+            "children": []
+          },
+          {
+            "id": "sk_engineer-system-change",
+            "name": "Engineer System Change",
+            "atomId": "sk_engineer-system-change",
+            "children": []
+          },
+          {
+            "id": "sk_smoke-test",
+            "name": "Smoke Test",
+            "atomId": "sk_smoke-test",
+            "children": []
+          },
+          {
+            "id": "sk_vercel-deploy",
+            "name": "Vercel Deploy",
+            "atomId": "sk_vercel-deploy",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "dom_general",
+        "name": "General",
+        "atomId": null,
+        "children": [
+          {
+            "id": "sk_surprise-me",
+            "name": "Surprise Me",
+            "atomId": "sk_surprise-me",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "dom_media_creative",
+        "name": "Media & Creative",
+        "atomId": null,
+        "children": [
+          {
+            "id": "sk_chart-visualization",
+            "name": "Chart Visualization",
+            "atomId": "sk_chart-visualization",
+            "children": []
+          },
+          {
+            "id": "sk_frontend-design",
+            "name": "Frontend Design",
+            "atomId": "sk_frontend-design",
+            "children": []
+          },
+          {
+            "id": "sk_image-generation",
+            "name": "Image Generation",
+            "atomId": "sk_image-generation",
+            "children": []
+          },
+          {
+            "id": "sk_music-generation",
+            "name": "Music Generation",
+            "atomId": "sk_music-generation",
+            "children": []
+          },
+          {
+            "id": "sk_podcast-generation",
+            "name": "Podcast Generation",
+            "atomId": "sk_podcast-generation",
+            "children": []
+          },
+          {
+            "id": "sk_ppt-generation",
+            "name": "Ppt Generation",
+            "atomId": "sk_ppt-generation",
+            "children": []
+          },
+          {
+            "id": "sk_video-generation",
+            "name": "Video Generation",
+            "atomId": "sk_video-generation",
+            "children": []
+          },
+          {
+            "id": "sk_web-design-guidelines",
+            "name": "Web Design Guidelines",
+            "atomId": "sk_web-design-guidelines",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "dom_meta_skills",
+        "name": "Meta-Skills",
+        "atomId": null,
+        "children": [
+          {
+            "id": "sk_bootstrap",
+            "name": "bootstrap",
+            "atomId": "sk_bootstrap",
+            "children": []
+          },
+          {
+            "id": "sk_find-skills",
+            "name": "Find Skills",
+            "atomId": "sk_find-skills",
+            "children": []
+          },
+          {
+            "id": "sk_skill-creator",
+            "name": "Skill Creator",
+            "atomId": "sk_skill-creator",
+            "children": []
+          },
+          {
+            "id": "sk_skill-reviewer",
+            "name": "Skill Reviewer",
+            "atomId": "sk_skill-reviewer",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "dom_research",
+        "name": "Research",
+        "atomId": null,
+        "children": [
+          {
+            "id": "sk_academic-paper-review",
+            "name": "Academic Paper Review",
+            "atomId": "sk_academic-paper-review",
+            "children": []
+          },
+          {
+            "id": "sk_claude-to-deerflow",
+            "name": "Claude To Deerflow",
+            "atomId": "sk_claude-to-deerflow",
+            "children": []
+          },
+          {
+            "id": "sk_consulting-analysis",
+            "name": "Consulting Analysis",
+            "atomId": "sk_consulting-analysis",
+            "children": []
+          },
+          {
+            "id": "sk_deep-research",
+            "name": "Deep Research",
+            "atomId": "sk_deep-research",
+            "children": []
+          },
+          {
+            "id": "sk_github-deep-research",
+            "name": "Github Deep Research",
+            "atomId": "sk_github-deep-research",
+            "children": []
+          },
+          {
+            "id": "sk_newsletter-generation",
+            "name": "Newsletter Generation",
+            "atomId": "sk_newsletter-generation",
+            "children": []
+          },
+          {
+            "id": "sk_systematic-literature-review",
+            "name": "Systematic Literature Review",
+            "atomId": "sk_systematic-literature-review",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "learnedKnowledgeTree": {
+    "id": "learned_root",
+    "name": "Learned Knowledge",
+    "atomId": null,
+    "children": [
+      {
+        "id": "lk_patterns",
+        "name": "Cross-Domain Patterns",
+        "atomId": null,
+        "children": [
+          {
+            "id": "lk_p1",
+            "name": "Skill progressive disclosure (metadata \u2192 body \u2192 resources)",
+            "atomId": null,
+            "children": []
+          },
+          {
+            "id": "lk_p2",
+            "name": "Extension-first evaluation before core edits",
+            "atomId": null,
+            "children": []
+          },
+          {
+            "id": "lk_p3",
+            "name": "Gateway as single LangGraph runtime + IM channels",
+            "atomId": null,
+            "children": []
+          },
+          {
+            "id": "lk_p4",
+            "name": "skill_manage persistence vs sandbox write_file",
+            "atomId": null,
+            "children": []
+          },
+          {
+            "id": "lk_p5",
+            "name": "Version lockstep: pyproject + package.json + helm chart",
+            "atomId": null,
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "lk_gaps",
+        "name": "Known Gaps",
+        "atomId": null,
+        "children": [
+          {
+            "id": "lk_g1",
+            "name": "Full monorepo not runnable in this sandbox without Docker + API keys",
+            "atomId": null,
+            "children": []
+          },
+          {
+            "id": "lk_g2",
+            "name": "gog CLI not installed; Drive via connected tools only",
+            "atomId": null,
+            "children": []
+          },
+          {
+            "id": "lk_g3",
+            "name": "Catalog has 4344 skills \u2014 need selective install, not bulk",
+            "atomId": null,
+            "children": []
+          },
+          {
+            "id": "lk_g4",
+            "name": "Vercel deploy needs project binding and secrets",
+            "atomId": null,
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "lk_abstractions",
+        "name": "Abstractions",
+        "atomId": null,
+        "children": [
+          {
+            "id": "lk_a1",
+            "name": "SuperAgent harness = lead agent + skills + subagents + sandbox + memory",
+            "atomId": null,
+            "children": []
+          },
+          {
+            "id": "lk_a2",
+            "name": "Ontology: Skills \u2282 Capabilities, Tools \u2282 Actions, Plugins \u2282 Extensions",
+            "atomId": null,
+            "children": []
+          },
+          {
+            "id": "lk_a3",
+            "name": "Knowledge graph: Skill --uses--> Tool --served_by--> Service --exposes--> API",
+            "atomId": null,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "toolTree": {
+    "id": "tools_root",
+    "name": "Tool Tree",
+    "atomId": null,
+    "children": [
+      {
+        "id": "tools_harness",
+        "name": "DeerFlow Harness Tools",
+        "atomId": null,
+        "children": [
+          {
+            "id": "tool_conversation",
+            "name": "conversation",
+            "atomId": "tool_conversation",
+            "children": []
+          },
+          {
+            "id": "tool_mcp_metadata",
+            "name": "mcp_metadata",
+            "atomId": "tool_mcp_metadata",
+            "children": []
+          },
+          {
+            "id": "tool_artifact_registry",
+            "name": "artifact_registry",
+            "atomId": "tool_artifact_registry",
+            "children": []
+          },
+          {
+            "id": "tool_sync",
+            "name": "sync",
+            "atomId": "tool_sync",
+            "children": []
+          },
+          {
+            "id": "tool_types",
+            "name": "types",
+            "atomId": "tool_types",
+            "children": []
+          },
+          {
+            "id": "tool_tools",
+            "name": "tools",
+            "atomId": "tool_tools",
+            "children": []
+          },
+          {
+            "id": "tool_tool_provenance",
+            "name": "tool_provenance",
+            "atomId": "tool_tool_provenance",
+            "children": []
+          },
+          {
+            "id": "tool_skill_manage_tool",
+            "name": "skill_manage_tool",
+            "atomId": "tool_skill_manage_tool",
+            "children": []
+          },
+          {
+            "id": "tool_scheduled_tasks",
+            "name": "scheduled_tasks",
+            "atomId": "tool_scheduled_tasks",
+            "children": []
+          },
+          {
+            "id": "tool_batch_task_tool",
+            "name": "batch_task_tool",
+            "atomId": "tool_batch_task_tool",
+            "children": []
+          },
+          {
+            "id": "tool_task_tool",
+            "name": "task_tool",
+            "atomId": "tool_task_tool",
+            "children": []
+          },
+          {
+            "id": "tool_list_uploaded_files_tool",
+            "name": "list_uploaded_files_tool",
+            "atomId": "tool_list_uploaded_files_tool",
+            "children": []
+          },
+          {
+            "id": "tool_background_tasks_tool",
+            "name": "background_tasks_tool",
+            "atomId": "tool_background_tasks_tool",
+            "children": []
+          },
+          {
+            "id": "tool_setup_agent_tool",
+            "name": "setup_agent_tool",
+            "atomId": "tool_setup_agent_tool",
+            "children": []
+          },
+          {
+            "id": "tool_tool_search",
+            "name": "tool_search",
+            "atomId": "tool_tool_search",
+            "children": []
+          },
+          {
+            "id": "tool_view_image_tool",
+            "name": "view_image_tool",
+            "atomId": "tool_view_image_tool",
+            "children": []
+          },
+          {
+            "id": "tool_review_skill_package_tool",
+            "name": "review_skill_package_tool",
+            "atomId": "tool_review_skill_package_tool",
+            "children": []
+          },
+          {
+            "id": "tool_update_agent_tool",
+            "name": "update_agent_tool",
+            "atomId": "tool_update_agent_tool",
+            "children": []
+          },
+          {
+            "id": "tool_invoke_acp_agent_tool",
+            "name": "invoke_acp_agent_tool",
+            "atomId": "tool_invoke_acp_agent_tool",
+            "children": []
+          },
+          {
+            "id": "tool_present_file_tool",
+            "name": "present_file_tool",
+            "atomId": "tool_present_file_tool",
+            "children": []
+          },
+          {
+            "id": "tool_clarification_tool",
+            "name": "clarification_tool",
+            "atomId": "tool_clarification_tool",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "tools_mcp",
+        "name": "MCP Servers",
+        "atomId": null,
+        "children": [
+          {
+            "id": "mcp_github",
+            "name": "github",
+            "atomId": "mcp_github",
+            "children": []
+          },
+          {
+            "id": "mcp_parallel-search",
+            "name": "parallel-search",
+            "atomId": "mcp_parallel-search",
+            "children": []
+          },
+          {
+            "id": "mcp_openviking",
+            "name": "openviking",
+            "atomId": "mcp_openviking",
+            "children": []
+          },
+          {
+            "id": "mcp_postgres",
+            "name": "postgres",
+            "atomId": "mcp_postgres",
+            "children": []
+          },
+          {
+            "id": "mcp_long-running-reports",
+            "name": "long-running-reports",
+            "atomId": "mcp_long-running-reports",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "tools_connected",
+        "name": "Connected Services",
+        "atomId": null,
+        "children": [
+          {
+            "id": "ct_gdrive",
+            "name": "Google Drive",
+            "atomId": null,
+            "children": []
+          },
+          {
+            "id": "ct_github",
+            "name": "GitHub",
+            "atomId": null,
+            "children": []
+          },
+          {
+            "id": "ct_vercel",
+            "name": "Vercel",
+            "atomId": null,
+            "children": []
+          },
+          {
+            "id": "ct_voice",
+            "name": "Voice",
+            "atomId": null,
+            "children": []
+          },
+          {
+            "id": "ct_automations",
+            "name": "Automations",
+            "atomId": null,
+            "children": []
+          },
+          {
+            "id": "ct_hyperframes",
+            "name": "HyperFrames",
+            "atomId": null,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "pluginTree": {
+    "id": "plugins_root",
+    "name": "Plugin Tree",
+    "atomId": null,
+    "children": [
+      {
+        "id": "plugin_jev-context",
+        "name": "deerflow-extension-jev-context",
+        "atomId": "plugin_jev-context",
+        "children": []
+      },
+      {
+        "id": "plugin_example",
+        "name": "deerflow-extension-example",
+        "atomId": "plugin_example",
+        "children": []
+      },
+      {
+        "id": "plugin_jev-screening",
+        "name": "deerflow-extension-jev-screening",
+        "atomId": "plugin_jev-screening",
+        "children": []
+      },
+      {
+        "id": "plugin_agent-teams",
+        "name": "deerflow-extension-agent-teams",
+        "atomId": "plugin_agent-teams",
+        "children": []
+      },
+      {
+        "id": "plugin_bookmarks",
+        "name": "deerflow-extension-bookmarks",
+        "atomId": "plugin_bookmarks",
+        "children": []
+      },
+      {
+        "id": "plugin_jev-classify",
+        "name": "deerflow-extension-jev-classify",
+        "atomId": "plugin_jev-classify",
+        "children": []
+      },
+      {
+        "id": "plugin_extension_api",
+        "name": "deerflow-extension-api",
+        "atomId": "plugin_extension_api",
+        "children": []
+      }
+    ]
+  },
+  "serviceTree": {
+    "id": "svc_root",
+    "name": "Service Topology",
+    "atomId": null,
+    "children": [
+      {
+        "id": "svc_nginx",
+        "name": "Nginx (:2026)",
+        "atomId": "svc_nginx",
+        "children": []
+      },
+      {
+        "id": "svc_gateway",
+        "name": "Gateway API (:8001)",
+        "atomId": "svc_gateway",
+        "children": []
+      },
+      {
+        "id": "svc_frontend",
+        "name": "Frontend (:3000)",
+        "atomId": "svc_frontend",
+        "children": []
+      },
+      {
+        "id": "svc_provisioner",
+        "name": "Provisioner (:8002)",
+        "atomId": "svc_provisioner",
+        "children": []
+      }
+    ]
+  },
+  "insights": [
+    {
+      "id": "ins_1",
+      "text": "DeerFlow 2.x is a SuperAgent harness (LangGraph + Next.js), not just a research pipeline.",
+      "score": 0.95
+    },
+    {
+      "id": "ins_2",
+      "text": "Public skills cover research, media generation, skill meta-tools, and deploy \u2014 a full creator loop.",
+      "score": 0.9
+    },
+    {
+      "id": "ins_3",
+      "text": "skill-creator is the primary meta-skill; skill-reviewer + contracts enforce quality gates.",
+      "score": 0.9
+    },
+    {
+      "id": "ins_4",
+      "text": "Catalog.json indexes 4344 external skills across 30+ categories \u2014 integration layer needed.",
+      "score": 0.88
+    },
+    {
+      "id": "ins_5",
+      "text": "Extension-first design: prefer packages under plugins/ over core modifications.",
+      "score": 0.87
+    },
+    {
+      "id": "ins_6",
+      "text": "Connected stack for this workspace: Drive (ingest/backup), GitHub (repo), Vercel (frontend deploy).",
+      "score": 0.85
+    }
+  ],
+  "critic": [
+    {
+      "id": "cr_1",
+      "severity": "info",
+      "text": "Eval fixture skills excluded from production master tree."
+    },
+    {
+      "id": "cr_2",
+      "severity": "warning",
+      "text": "Bootstrap skill description frontmatter incomplete (>- only)."
+    },
+    {
+      "id": "cr_3",
+      "severity": "info",
+      "text": "Large binary assets and node_modules intentionally not mirrored."
+    }
+  ],
+  "log": [
+    {
+      "at": "2026-10-10T13:43:47.390147Z",
+      "event": "cycle_1_ingest_deerflow",
+      "atoms": 61,
+      "tools": 21,
+      "plugins": 7,
+      "catalog": 4344
+    }
+  ],
+  "sources": {
+    "deerflow_zip": "deer-flow-main (1).zip",
+    "catalog": "catalog.json (4344 skills)",
+    "skill_atlas": "skill-atlas.html",
+    "awesome_agent_evolution": "awesome-agent-evolution-main.zip"
+  }
+}

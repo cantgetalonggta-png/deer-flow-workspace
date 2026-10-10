@@ -1,0 +1,245 @@
+[
+  {
+    "id": "surprise-me",
+    "name": "surprise-me",
+    "path": "skills/public/surprise-me/SKILL.md",
+    "description": "Create a delightful, unexpected \"wow\" experience for the user by dynamically discovering and creatively combining other enabled skills. Triggers when the user says \"surprise me\" or any request expressing a desire for an unexpected creative showcase. Also triggers when the user is bored, wants inspiration, or asks for \"something interesting\".",
+    "size": 2640,
+    "has_scripts": false,
+    "has_refs": false
+  },
+  {
+    "id": "academic-paper-review",
+    "name": "academic-paper-review",
+    "path": "skills/public/academic-paper-review/SKILL.md",
+    "description": "Use this skill when the user requests to review, analyze, critique, or summarize academic papers, research articles, preprints, or scientific publications. Supports comprehensive structured reviews covering methodology assessment, contribution evaluation, literature positioning, and constructive feedback generation. Trigger on queries involving paper URLs, uploaded PDFs, arXiv links, or requests like \"review this paper\", \"analyze this research\", \"summarize this study\", or \"write a peer review\".",
+    "size": 12138,
+    "has_scripts": false,
+    "has_refs": false
+  },
+  {
+    "id": "video-generation",
+    "name": "video-generation",
+    "path": "skills/public/video-generation/SKILL.md",
+    "description": "Use this skill when the user requests to generate, create, or imagine videos. Supports structured prompts and reference image for guided generation.",
+    "size": 5487,
+    "has_scripts": true,
+    "has_refs": false
+  },
+  {
+    "id": "systematic-literature-review",
+    "name": "systematic-literature-review",
+    "path": "skills/public/systematic-literature-review/SKILL.md",
+    "description": "Use this skill when the user wants a systematic literature review, survey, or synthesis across multiple academic papers on a topic. Also covers annotated bibliographies and cross-paper comparisons. Searches arXiv and outputs reports in APA, IEEE, or BibTeX format. Not for single-paper tasks \u2014 use academic-paper-review for reviewing one paper.",
+    "size": 17256,
+    "has_scripts": true,
+    "has_refs": true
+  },
+  {
+    "id": "skill-creator",
+    "name": "skill-creator",
+    "path": "skills/public/skill-creator/SKILL.md",
+    "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
+    "size": 36683,
+    "has_scripts": true,
+    "has_refs": true
+  },
+  {
+    "id": "data-analysis",
+    "name": "data-analysis",
+    "path": "skills/public/data-analysis/SKILL.md",
+    "description": "Use this skill when the user uploads Excel (.xlsx/.xls) or CSV files and wants to perform data analysis, generate statistics, create summaries, pivot tables, SQL queries, or any form of structured data exploration. Supports multi-sheet Excel workbooks, aggregation, filtering, joins, and exporting results to CSV/JSON/Markdown.",
+    "size": 8868,
+    "has_scripts": true,
+    "has_refs": false
+  },
+  {
+    "id": "ppt-generation",
+    "name": "ppt-generation",
+    "path": "skills/public/ppt-generation/SKILL.md",
+    "description": "Use this skill when the user requests to generate, create, or make presentations (PPT/PPTX). Creates visually rich slides by generating images for each slide and composing them into a PowerPoint file.",
+    "size": 28359,
+    "has_scripts": true,
+    "has_refs": false
+  },
+  {
+    "id": "music-generation",
+    "name": "music-generation",
+    "path": "skills/public/music-generation/SKILL.md",
+    "description": "Use this skill when the user requests to generate, create, compose, or produce music or songs \u2014 background music, theme songs, jingles, or instrumental tracks. Generates a song from a style/mood prompt and optional lyrics via the MiniMax music API.",
+    "size": 2875,
+    "has_scripts": true,
+    "has_refs": false
+  },
+  {
+    "id": "chart-visualization",
+    "name": "chart-visualization",
+    "path": "skills/public/chart-visualization/SKILL.md",
+    "description": "This skill should be used when the user wants to visualize data. It intelligently selects the most suitable chart type from 26 available options, extracts parameters based on detailed specifications, and generates a chart image using a JavaScript script.",
+    "size": 3358,
+    "has_scripts": true,
+    "has_refs": true
+  },
+  {
+    "id": "deep-research",
+    "name": "deep-research",
+    "path": "skills/public/deep-research/SKILL.md",
+    "description": "Use this skill instead of WebSearch for ANY question requiring web research. Trigger on queries like \"what is X\", \"explain X\", \"compare X and Y\", \"research X\", or before content generation tasks. Provides systematic multi-angle research methodology instead of single superficial searches. Use this proactively when the user's question needs online information.",
+    "size": 7879,
+    "has_scripts": false,
+    "has_refs": false
+  },
+  {
+    "id": "bootstrap",
+    "name": "bootstrap",
+    "path": "skills/public/bootstrap/SKILL.md",
+    "description": ">-",
+    "size": 4802,
+    "has_scripts": false,
+    "has_refs": true
+  },
+  {
+    "id": "claude-to-deerflow",
+    "name": "claude-to-deerflow",
+    "path": "skills/public/claude-to-deerflow/SKILL.md",
+    "description": "Interact with DeerFlow AI agent platform via its HTTP API. Use this skill when the user wants to send messages or questions to DeerFlow for research/analysis, start a DeerFlow conversation thread, check DeerFlow status or health, list available models/skills/agents in DeerFlow, manage DeerFlow memory, upload files to DeerFlow threads, or delegate complex research tasks to DeerFlow. Also use when the user mentions deerflow, deer flow, or wants to run a deep research task that DeerFlow can handle.",
+    "size": 6864,
+    "has_scripts": true,
+    "has_refs": false
+  },
+  {
+    "id": "skill-reviewer",
+    "name": "skill-reviewer",
+    "path": "skills/public/skill-reviewer/SKILL.md",
+    "description": "Reviews DeerFlow skill packages for readiness, triggers, safety boundaries, resources, and evidence. Invoke when users ask to audit, grade, or production-check an existing skill.",
+    "size": 5500,
+    "has_scripts": false,
+    "has_refs": true
+  },
+  {
+    "id": "podcast-generation",
+    "name": "podcast-generation",
+    "path": "skills/public/podcast-generation/SKILL.md",
+    "description": "Use this skill when the user requests to generate, create, or produce podcasts from text content. Converts written content into a two-host conversational podcast audio format with natural dialogue.",
+    "size": 8630,
+    "has_scripts": true,
+    "has_refs": true
+  },
+  {
+    "id": "vercel-deploy",
+    "name": "vercel-deploy",
+    "path": "skills/public/vercel-deploy/SKILL.md",
+    "description": "Deploy applications and websites to Vercel. Use this skill when the user requests deployment actions such as \"Deploy my app\", \"Deploy this to production\", \"Create a preview deployment\", \"Deploy and give me the link\", or \"Push this live\". No authentication required - returns preview URL and claimable deployment link.",
+    "size": 3191,
+    "has_scripts": true,
+    "has_refs": false
+  },
+  {
+    "id": "image-generation",
+    "name": "image-generation",
+    "path": "skills/public/image-generation/SKILL.md",
+    "description": "Use this skill when the user requests to generate, create, imagine, or visualize images including characters, scenes, products, or any visual content. Supports structured prompts and reference images for guided generation.",
+    "size": 11444,
+    "has_scripts": true,
+    "has_refs": true
+  },
+  {
+    "id": "web-design-guidelines",
+    "name": "web-design-guidelines",
+    "path": "skills/public/web-design-guidelines/SKILL.md",
+    "description": "Review UI code for Web Interface Guidelines compliance. Use when asked to \"review my UI\", \"check accessibility\", \"audit design\", \"review UX\", or \"check my site against best practices\".",
+    "size": 1231,
+    "has_scripts": false,
+    "has_refs": false
+  },
+  {
+    "id": "frontend-design",
+    "name": "frontend-design",
+    "path": "skills/public/frontend-design/SKILL.md",
+    "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
+    "size": 7409,
+    "has_scripts": false,
+    "has_refs": false
+  },
+  {
+    "id": "newsletter-generation",
+    "name": "newsletter-generation",
+    "path": "skills/public/newsletter-generation/SKILL.md",
+    "description": "Use this skill when the user requests to generate, create, write, or draft a newsletter, email digest, weekly roundup, industry briefing, or curated content summary. Supports topic-based research, content curation from multiple sources, and professional formatting for email or web distribution. Trigger on requests like \"create a newsletter about X\", \"write a weekly digest\", \"generate a tech roundup\", or \"curate news about Y\".",
+    "size": 12859,
+    "has_scripts": false,
+    "has_refs": false
+  },
+  {
+    "id": "code-documentation",
+    "name": "code-documentation",
+    "path": "skills/public/code-documentation/SKILL.md",
+    "description": "Use this skill when the user requests to generate, create, or improve documentation for code, APIs, libraries, repositories, or software projects. Supports README generation, API reference documentation, inline code comments, architecture documentation, changelog generation, and developer guides. Trigger on requests like \"document this code\", \"create a README\", \"generate API docs\", \"write developer guide\", or when analyzing codebases for documentation purposes.",
+    "size": 13877,
+    "has_scripts": false,
+    "has_refs": false
+  },
+  {
+    "id": "consulting-analysis",
+    "name": "consulting-analysis",
+    "path": "skills/public/consulting-analysis/SKILL.md",
+    "description": "Use this skill when the user requests to generate, create, or write professional research reports including but not limited to market analysis, consumer insights, brand analysis, financial analysis, industry research, competitive intelligence, investment due diligence, or any consulting-grade analytical report. This skill operates in two phases \u2014 (1) generating a structured analysis framework with chapter skeleton, data query requirements, and analysis logic, and (2) after data collection by oth",
+    "size": 33637,
+    "has_scripts": false,
+    "has_refs": false
+  },
+  {
+    "id": "github-deep-research",
+    "name": "github-deep-research",
+    "path": "skills/public/github-deep-research/SKILL.md",
+    "description": "Conduct multi-round deep research on any GitHub Repo. Use when users request comprehensive analysis, timeline reconstruction, competitive analysis, or in-depth investigation of GitHub. Produces structured markdown reports with executive summaries, chronological timelines, metrics analysis, and Mermaid diagrams. Triggers on Github repository URL or open source projects.",
+    "size": 5055,
+    "has_scripts": true,
+    "has_refs": false
+  },
+  {
+    "id": "find-skills",
+    "name": "find-skills",
+    "path": "skills/public/find-skills/SKILL.md",
+    "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
+    "size": 4910,
+    "has_scripts": true,
+    "has_refs": false
+  },
+  {
+    "id": "deerflow-maintainer-orchestrator",
+    "name": "deerflow-maintainer-orchestrator",
+    "path": ".agent/skills/deerflow-maintainer-orchestrator/SKILL.md",
+    "description": "Use when a DeerFlow maintainer needs comment-only GitHub issue or PR handling: resolve issue/PR scopes with gh, analyze issues, post or draft issue comments, perform PR review comments, review PR or issue batches, compare competing PRs that target the same issue, give fix strategy, risk classification, and validation guidance. Intended for maintainers and trusted local agents, not general contributors.",
+    "size": 21438,
+    "has_scripts": false,
+    "has_refs": false
+  },
+  {
+    "id": "blocking-io-guard",
+    "name": "blocking-io-guard",
+    "path": ".agent/skills/blocking-io-guard/SKILL.md",
+    "description": "Ensure async-path backend code that could block the asyncio event loop is protected by a teeth-verified runtime anchor in tests/blocking_io/. Use when changing backend Python under app/, packages/harness/deerflow/, or scripts/, when running a blocking-IO triage round over the whole repo, or when a reviewer/CI asks for blocking-IO coverage. Runs a deterministic scan (changed-lines or full-repo), routes each candidate, drafts/extends an anchor, and proves it fails when the blocking IO regresses.",
+    "size": 6827,
+    "has_scripts": false,
+    "has_refs": true
+  },
+  {
+    "id": "smoke-test",
+    "name": "smoke-test",
+    "path": ".agent/skills/smoke-test/SKILL.md",
+    "description": "End-to-end smoke test skill for DeerFlow. Guides through: 1) Pulling latest code, 2) Docker OR Local installation and deployment (user preference, default to Local if Docker network issues), 3) Service availability verification, 4) Health check, 5) Final test report. Use when the user says \"run smoke test\", \"smoke test deployment\", \"verify installation\", \"test service availability\", \"end-to-end test\", or similar.",
+    "size": 10097,
+    "has_scripts": true,
+    "has_refs": true
+  },
+  {
+    "id": "engineer-system-change",
+    "name": "engineer-system-change",
+    "path": ".agent/skills/engineer-system-change/SKILL.md",
+    "description": "Evaluate and carry out non-trivial software-system changes from first principles. Use when assessing RFCs, issues, designs, features, refactors, migrations, dependency changes, or proposed fields, events, APIs, modules, and services whose need, consumers, system fit, validation, or rollback require scrutiny. Read the actual system, identify the concrete problem and named semantic consumers, choose the smallest sufficient solution, reject pseudo-requirements and speculative abstractions, and requ",
+    "size": 9846,
+    "has_scripts": false,
+    "has_refs": false
+  }
+]

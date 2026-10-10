@@ -1,0 +1,870 @@
+{
+  "nodes": [
+    {
+      "id": "sys_deerflow",
+      "label": "DeerFlow SuperAgent",
+      "type": "system"
+    },
+    {
+      "id": "svc_nginx",
+      "label": "Nginx",
+      "type": "service",
+      "port": 2026
+    },
+    {
+      "id": "svc_gateway",
+      "label": "Gateway API",
+      "type": "service",
+      "port": 8001
+    },
+    {
+      "id": "svc_frontend",
+      "label": "Frontend",
+      "type": "service",
+      "port": 3000
+    },
+    {
+      "id": "svc_provisioner",
+      "label": "Provisioner",
+      "type": "service",
+      "port": 8002
+    },
+    {
+      "id": "sk_surprise-me",
+      "label": "Surprise Me",
+      "type": "skill",
+      "domain": "General"
+    },
+    {
+      "id": "sk_academic-paper-review",
+      "label": "Academic Paper Review",
+      "type": "skill",
+      "domain": "Research"
+    },
+    {
+      "id": "sk_video-generation",
+      "label": "Video Generation",
+      "type": "skill",
+      "domain": "Media & Creative"
+    },
+    {
+      "id": "sk_systematic-literature-review",
+      "label": "Systematic Literature Review",
+      "type": "skill",
+      "domain": "Research"
+    },
+    {
+      "id": "sk_skill-creator",
+      "label": "Skill Creator",
+      "type": "skill",
+      "domain": "Meta-Skills"
+    },
+    {
+      "id": "sk_data-analysis",
+      "label": "Data Analysis",
+      "type": "skill",
+      "domain": "Analysis"
+    },
+    {
+      "id": "sk_ppt-generation",
+      "label": "Ppt Generation",
+      "type": "skill",
+      "domain": "Media & Creative"
+    },
+    {
+      "id": "sk_music-generation",
+      "label": "Music Generation",
+      "type": "skill",
+      "domain": "Media & Creative"
+    },
+    {
+      "id": "sk_chart-visualization",
+      "label": "Chart Visualization",
+      "type": "skill",
+      "domain": "Media & Creative"
+    },
+    {
+      "id": "sk_deep-research",
+      "label": "Deep Research",
+      "type": "skill",
+      "domain": "Research"
+    },
+    {
+      "id": "sk_bootstrap",
+      "label": "bootstrap",
+      "type": "skill",
+      "domain": "Meta-Skills"
+    },
+    {
+      "id": "sk_claude-to-deerflow",
+      "label": "Claude To Deerflow",
+      "type": "skill",
+      "domain": "Research"
+    },
+    {
+      "id": "sk_skill-reviewer",
+      "label": "Skill Reviewer",
+      "type": "skill",
+      "domain": "Meta-Skills"
+    },
+    {
+      "id": "sk_podcast-generation",
+      "label": "Podcast Generation",
+      "type": "skill",
+      "domain": "Media & Creative"
+    },
+    {
+      "id": "sk_vercel-deploy",
+      "label": "Vercel Deploy",
+      "type": "skill",
+      "domain": "Engineering & Ops"
+    },
+    {
+      "id": "sk_image-generation",
+      "label": "Image Generation",
+      "type": "skill",
+      "domain": "Media & Creative"
+    },
+    {
+      "id": "sk_web-design-guidelines",
+      "label": "Web Design Guidelines",
+      "type": "skill",
+      "domain": "Media & Creative"
+    },
+    {
+      "id": "sk_frontend-design",
+      "label": "Frontend Design",
+      "type": "skill",
+      "domain": "Media & Creative"
+    },
+    {
+      "id": "sk_newsletter-generation",
+      "label": "Newsletter Generation",
+      "type": "skill",
+      "domain": "Research"
+    },
+    {
+      "id": "sk_code-documentation",
+      "label": "Code Documentation",
+      "type": "skill",
+      "domain": "Analysis"
+    },
+    {
+      "id": "sk_consulting-analysis",
+      "label": "Consulting Analysis",
+      "type": "skill",
+      "domain": "Research"
+    },
+    {
+      "id": "sk_github-deep-research",
+      "label": "Github Deep Research",
+      "type": "skill",
+      "domain": "Research"
+    },
+    {
+      "id": "sk_find-skills",
+      "label": "Find Skills",
+      "type": "skill",
+      "domain": "Meta-Skills"
+    },
+    {
+      "id": "sk_deerflow-maintainer-orchestrator",
+      "label": "Deerflow Maintainer Orchestrator",
+      "type": "skill",
+      "domain": "Engineering & Ops"
+    },
+    {
+      "id": "sk_blocking-io-guard",
+      "label": "Blocking Io Guard",
+      "type": "skill",
+      "domain": "Engineering & Ops"
+    },
+    {
+      "id": "sk_smoke-test",
+      "label": "Smoke Test",
+      "type": "skill",
+      "domain": "Engineering & Ops"
+    },
+    {
+      "id": "sk_engineer-system-change",
+      "label": "Engineer System Change",
+      "type": "skill",
+      "domain": "Engineering & Ops"
+    },
+    {
+      "id": "sk_catalog_agents",
+      "label": "Catalog: agents",
+      "type": "skill",
+      "domain": "Catalog"
+    },
+    {
+      "id": "sk_catalog_ai",
+      "label": "Catalog: ai",
+      "type": "skill",
+      "domain": "Catalog"
+    },
+    {
+      "id": "sk_catalog_browser_automation",
+      "label": "Catalog: browser automation",
+      "type": "skill",
+      "domain": "Catalog"
+    },
+    {
+      "id": "sk_catalog_calendar_email_productivity",
+      "label": "Catalog: calendar, email & productivity",
+      "type": "skill",
+      "domain": "Catalog"
+    },
+    {
+      "id": "sk_catalog_ci_cd_integrations",
+      "label": "Catalog: ci/cd integrations",
+      "type": "skill",
+      "domain": "Catalog"
+    },
+    {
+      "id": "sk_catalog_cloud",
+      "label": "Catalog: cloud",
+      "type": "skill",
+      "domain": "Catalog"
+    },
+    {
+      "id": "sk_catalog_code_quality_review",
+      "label": "Catalog: code quality & review",
+      "type": "skill",
+      "domain": "Catalog"
+    },
+    {
+      "id": "sk_catalog_content_writing_seo",
+      "label": "Catalog: content writing & seo",
+      "type": "skill",
+      "domain": "Catalog"
+    },
+    {
+      "id": "sk_catalog_data",
+      "label": "Catalog: data",
+      "type": "skill",
+      "domain": "Catalog"
+    },
+    {
+      "id": "sk_catalog_data_extraction_transformation",
+      "label": "Catalog: data extraction & transformation",
+      "type": "skill",
+      "domain": "Catalog"
+    },
+    {
+      "id": "sk_catalog_data_api",
+      "label": "Catalog: data-api",
+      "type": "skill",
+      "domain": "Catalog"
+    },
+    {
+      "id": "sk_catalog_developer_tools",
+      "label": "Catalog: developer tools",
+      "type": "skill",
+      "domain": "Catalog"
+    },
+    {
+      "id": "sk_catalog_devops",
+      "label": "Catalog: devops",
+      "type": "skill",
+      "domain": "Catalog"
+    },
+    {
+      "id": "tool_conversation",
+      "label": "conversation",
+      "type": "tool"
+    },
+    {
+      "id": "tool_mcp_metadata",
+      "label": "mcp_metadata",
+      "type": "tool"
+    },
+    {
+      "id": "tool_artifact_registry",
+      "label": "artifact_registry",
+      "type": "tool"
+    },
+    {
+      "id": "tool_sync",
+      "label": "sync",
+      "type": "tool"
+    },
+    {
+      "id": "tool_types",
+      "label": "types",
+      "type": "tool"
+    },
+    {
+      "id": "tool_tools",
+      "label": "tools",
+      "type": "tool"
+    },
+    {
+      "id": "tool_tool_provenance",
+      "label": "tool_provenance",
+      "type": "tool"
+    },
+    {
+      "id": "tool_skill_manage_tool",
+      "label": "skill_manage_tool",
+      "type": "tool"
+    },
+    {
+      "id": "tool_scheduled_tasks",
+      "label": "scheduled_tasks",
+      "type": "tool"
+    },
+    {
+      "id": "tool_batch_task_tool",
+      "label": "batch_task_tool",
+      "type": "tool"
+    },
+    {
+      "id": "tool_task_tool",
+      "label": "task_tool",
+      "type": "tool"
+    },
+    {
+      "id": "tool_list_uploaded_files_tool",
+      "label": "list_uploaded_files_tool",
+      "type": "tool"
+    },
+    {
+      "id": "tool_background_tasks_tool",
+      "label": "background_tasks_tool",
+      "type": "tool"
+    },
+    {
+      "id": "tool_setup_agent_tool",
+      "label": "setup_agent_tool",
+      "type": "tool"
+    },
+    {
+      "id": "tool_tool_search",
+      "label": "tool_search",
+      "type": "tool"
+    },
+    {
+      "id": "tool_view_image_tool",
+      "label": "view_image_tool",
+      "type": "tool"
+    },
+    {
+      "id": "tool_review_skill_package_tool",
+      "label": "review_skill_package_tool",
+      "type": "tool"
+    },
+    {
+      "id": "tool_update_agent_tool",
+      "label": "update_agent_tool",
+      "type": "tool"
+    },
+    {
+      "id": "tool_invoke_acp_agent_tool",
+      "label": "invoke_acp_agent_tool",
+      "type": "tool"
+    },
+    {
+      "id": "tool_present_file_tool",
+      "label": "present_file_tool",
+      "type": "tool"
+    },
+    {
+      "id": "tool_clarification_tool",
+      "label": "clarification_tool",
+      "type": "tool"
+    },
+    {
+      "id": "plugin_jev-context",
+      "label": "deerflow-extension-jev-context",
+      "type": "plugin"
+    },
+    {
+      "id": "plugin_example",
+      "label": "deerflow-extension-example",
+      "type": "plugin"
+    },
+    {
+      "id": "plugin_jev-screening",
+      "label": "deerflow-extension-jev-screening",
+      "type": "plugin"
+    },
+    {
+      "id": "plugin_agent-teams",
+      "label": "deerflow-extension-agent-teams",
+      "type": "plugin"
+    },
+    {
+      "id": "plugin_bookmarks",
+      "label": "deerflow-extension-bookmarks",
+      "type": "plugin"
+    },
+    {
+      "id": "plugin_jev-classify",
+      "label": "deerflow-extension-jev-classify",
+      "type": "plugin"
+    },
+    {
+      "id": "plugin_extension_api",
+      "label": "deerflow-extension-api",
+      "type": "plugin"
+    },
+    {
+      "id": "mcp_github",
+      "label": "github",
+      "type": "mcp"
+    },
+    {
+      "id": "mcp_parallel-search",
+      "label": "parallel-search",
+      "type": "mcp"
+    },
+    {
+      "id": "mcp_openviking",
+      "label": "openviking",
+      "type": "mcp"
+    },
+    {
+      "id": "mcp_postgres",
+      "label": "postgres",
+      "type": "mcp"
+    },
+    {
+      "id": "mcp_long-running-reports",
+      "label": "long-running-reports",
+      "type": "mcp"
+    }
+  ],
+  "edges": [
+    {
+      "source": "sys_deerflow",
+      "rel": "runs",
+      "target": "svc_nginx"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "runs",
+      "target": "svc_gateway"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "runs",
+      "target": "svc_frontend"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "runs",
+      "target": "svc_provisioner"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_surprise-me"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_academic-paper-review"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_video-generation"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_systematic-literature-review"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_skill-creator"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_data-analysis"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_ppt-generation"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_music-generation"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_chart-visualization"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_deep-research"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_bootstrap"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_claude-to-deerflow"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_skill-reviewer"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_podcast-generation"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_vercel-deploy"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_image-generation"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_web-design-guidelines"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_frontend-design"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_newsletter-generation"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_code-documentation"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_consulting-analysis"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_github-deep-research"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_find-skills"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_deerflow-maintainer-orchestrator"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_blocking-io-guard"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_smoke-test"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_engineer-system-change"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_catalog_agents"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_catalog_ai"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_catalog_browser_automation"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_catalog_calendar_email_productivity"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_catalog_ci_cd_integrations"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_catalog_cloud"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_catalog_code_quality_review"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_catalog_content_writing_seo"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_catalog_data"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_catalog_data_extraction_transformation"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_catalog_data_api"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_catalog_developer_tools"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "exposes_skill",
+      "target": "sk_catalog_devops"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "provides_tool",
+      "target": "tool_conversation"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "provides_tool",
+      "target": "tool_mcp_metadata"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "provides_tool",
+      "target": "tool_artifact_registry"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "provides_tool",
+      "target": "tool_sync"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "provides_tool",
+      "target": "tool_types"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "provides_tool",
+      "target": "tool_tools"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "provides_tool",
+      "target": "tool_tool_provenance"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "provides_tool",
+      "target": "tool_skill_manage_tool"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "provides_tool",
+      "target": "tool_scheduled_tasks"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "provides_tool",
+      "target": "tool_batch_task_tool"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "provides_tool",
+      "target": "tool_task_tool"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "provides_tool",
+      "target": "tool_list_uploaded_files_tool"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "provides_tool",
+      "target": "tool_background_tasks_tool"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "provides_tool",
+      "target": "tool_setup_agent_tool"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "provides_tool",
+      "target": "tool_tool_search"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "provides_tool",
+      "target": "tool_view_image_tool"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "provides_tool",
+      "target": "tool_review_skill_package_tool"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "provides_tool",
+      "target": "tool_update_agent_tool"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "provides_tool",
+      "target": "tool_invoke_acp_agent_tool"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "provides_tool",
+      "target": "tool_present_file_tool"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "provides_tool",
+      "target": "tool_clarification_tool"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "loads_plugin",
+      "target": "plugin_jev-context"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "loads_plugin",
+      "target": "plugin_example"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "loads_plugin",
+      "target": "plugin_jev-screening"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "loads_plugin",
+      "target": "plugin_agent-teams"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "loads_plugin",
+      "target": "plugin_bookmarks"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "loads_plugin",
+      "target": "plugin_jev-classify"
+    },
+    {
+      "source": "sys_deerflow",
+      "rel": "loads_plugin",
+      "target": "plugin_extension_api"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "connects_mcp",
+      "target": "mcp_github"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "connects_mcp",
+      "target": "mcp_parallel-search"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "connects_mcp",
+      "target": "mcp_openviking"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "connects_mcp",
+      "target": "mcp_postgres"
+    },
+    {
+      "source": "svc_gateway",
+      "rel": "connects_mcp",
+      "target": "mcp_long-running-reports"
+    },
+    {
+      "source": "sk_deep-research",
+      "rel": "uses",
+      "target": "tool_web"
+    },
+    {
+      "source": "sk_deep-research",
+      "rel": "uses",
+      "target": "mcp_parallel-search"
+    },
+    {
+      "source": "sk_vercel-deploy",
+      "rel": "uses",
+      "target": "ct_vercel"
+    },
+    {
+      "source": "sk_github-deep-research",
+      "rel": "uses",
+      "target": "ct_github"
+    },
+    {
+      "source": "sk_github-deep-research",
+      "rel": "uses",
+      "target": "mcp_github"
+    },
+    {
+      "source": "sk_data-analysis",
+      "rel": "uses",
+      "target": "tool_python"
+    },
+    {
+      "source": "sk_image-generation",
+      "rel": "uses",
+      "target": "tool_image"
+    },
+    {
+      "source": "sk_video-generation",
+      "rel": "uses",
+      "target": "tool_video"
+    },
+    {
+      "source": "sk_skill-creator",
+      "rel": "uses",
+      "target": "tool_skill_manage"
+    }
+  ]
+}
