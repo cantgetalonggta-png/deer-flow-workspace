@@ -1,0 +1,28 @@
+{
+  "github": {
+    "accounts": [
+      "cantgetalonggta-png"
+    ],
+    "repos": [
+      "deer-flow-workspace",
+      "skill-engine-dashboard"
+    ]
+  },
+  "vercel": {
+    "teamId": "team_kgQcPVmumwtmK3MdAGlxKJtg",
+    "projects": [
+      "deer-flow-workspace",
+      "skill-engine-dashboard"
+    ]
+  },
+  "drive": {
+    "folders": [
+      "deer-flow-builds"
+    ],
+    "sources": [
+      "deer-flow-main (1).zip",
+      "catalog.json"
+    ]
+  },
+  "updatedAt": "2026-10-10T13:47:15.360215Z"
+}
